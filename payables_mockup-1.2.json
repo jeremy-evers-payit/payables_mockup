@@ -1,0 +1,435 @@
+openapi: 3.0.0
+info:
+  description: 'This API specification is provided for illustrative and testing purposes only. It does not connect with backend systems nor use any real data. DISCLAIMER: FOR ILLUSTRATIVE AND TESTING PURPOSES ONLY - '
+  version: "1.2"
+  title: "Payables API"
+servers:
+# Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/cityoftoronto/PaymentPortalAPIs/1.2
+
+paths:
+ 
+  /tax/query:
+    post:
+      summary: Query Property Tax Payables
+      description: ''
+      operationId: queryTaxPayables
+      requestBody:
+       content: 
+         application/json:
+          schema:
+           $ref: '#/components/schemas/TaxQuery'
+      responses:
+        '200':
+          description: Property Tax account payables
+          content: 
+           application/json:
+            schema:
+             $ref:  '#/components/schemas/TaxQueryResp'
+        '405':
+          description: Invalid input
+
+  /tax/payment:
+    post:
+      summary: Record property tax payment
+      description: ''
+      operationId: recordTaxPayment
+      requestBody:
+        content:
+         application/json:
+          schema:
+           $ref: '#/components/schemas/TaxPayment'
+        description: Tax Account Payment
+        required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Invalid input
+
+
+  /utility/query:
+    post:
+      summary: Query Utility Payables
+      description: ''
+      operationId: queryUtilityPayables
+      requestBody:
+       content: 
+         application/json:
+          schema:
+           $ref: '#/components/schemas/UtilityQuery'
+      responses:
+        '200':
+          description: Utility Account payables
+          content: 
+           application/json:
+            schema:
+             $ref: '#/components/schemas/UtilityQueryResp'
+        '405':
+          description: Invalid input
+
+  /utility/payment:
+    post:
+      summary: Record Utility payment
+      description: ''
+      operationId: recordUtilityPayment
+      requestBody:
+        content:
+         application/json:
+          schema:
+           $ref: '#/components/schemas/UtilityPayment'
+        description: Utility Account Payment
+        required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Invalid input
+
+  /parkingticket/query:
+    post:
+      summary: Parking ticket Payables
+      description: ''
+      operationId: queryTicketPayables
+      requestBody:
+       content: 
+         application/json:
+          schema:
+           $ref: '#/components/schemas/TicketQuery'
+      responses:
+        '200':
+          description: Parking Tickets
+          content: 
+           application/json:
+            schema:
+              $ref: '#/components/schemas/TicketQueryResp'
+        '405':
+          description: Invalid input
+
+  /parkingticket/payment:
+    post:
+      summary: Record Parking ticket payment
+      description: ''
+      operationId: recordTicketPayment
+      requestBody:
+        content:
+         application/json:
+          schema:
+           $ref: '#/components/schemas/TicketPayment'
+        description: Parking Ticket Payment
+        required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Invalid input
+
+
+
+
+components:
+  schemas:
+  
+  ## TAX
+    TaxQuery:
+      description: "Property Tax payables query"
+      type: object
+      properties:
+        ROLL_NUMBER:
+          type: string
+          example: 191406329000500000006
+        TENANT_NUMBER:
+          type: string
+          example: 453534
+    TaxQueryResp:
+      description: "Property Tax payables"
+      type: object
+      properties:
+        LastUpdatedTimestamp:
+         type: string
+         format: date-time
+         example: 2019-11-12T22:33:44.123-0400
+        Service:
+          $ref: '#/components/schemas/TaxService'
+        Payables:
+          type: array
+          items:
+            $ref: '#/components/schemas/TaxPayable'
+
+    TaxService:
+      type: object
+      properties:
+        Type:
+          type: string
+          enum: ["TAX"]
+          example: TAX
+        ROLL_NUMBER:
+          type: string
+          example: 191406329000500000006
+        TENANT_NUMBER:
+          type: string
+          example: 453534
+        ROLL_TYPE:
+          type: string
+          example: Residential
+        Detail:
+          type: object
+          properties:
+            PropertyLocation:
+              type: string
+              example: 55 John Street, Toronto
+            TotalAmountDue:
+              type: number
+              example: 6234.33
+    TaxPayable:
+      allOf:
+        - $ref: '#/components/schemas/Payable'
+        - type: object
+          properties:
+            Type:
+              type: string
+              example: "PropertyTaxBill"
+            BILL_NUMBER:
+              type: string
+              example: "sdf345"
+            Principle:
+              type: number
+              example: 100.23
+            Interest:
+              type: number
+              example: 10.01
+            Fee:
+              type: number
+              example: 0.2
+    TaxPayment:
+     type: object
+     properties:
+      Payment:
+        $ref: '#/components/schemas/Payment'
+      Service:
+        $ref: '#/components/schemas/TaxService'
+      Payable:
+        $ref: '#/components/schemas/TaxPayable'
+
+  ## Utility
+    UtilityQuery:
+      description: "Utility payables query"
+      type: object
+      properties:
+        CLIENT_NUMBER:
+          type: string
+          example: 12343242
+        SERVICE_NUMBER:
+          type: string
+          example: 23452345
+    UtilityQueryResp:
+      description: "Utility payables"
+      type: object
+      properties:
+        LastUpdatedTimestamp:
+         type: string
+         format: date-time
+         example: 2019-11-12T22:33:44.123-0400
+        Service:
+          $ref: '#/components/schemas/UtilityService'
+        Payables:
+          type: array
+          items:
+            $ref: '#/components/schemas/UtilityPayable'
+    UtilityService:
+      type: object
+      properties:
+        Type:
+          type: string
+          enum: ["UTILITY"]
+          example: UTILITY
+        CLIENT_NUMBER:
+          type: string
+          example: 12343242
+        SERVICE_NUMBER:
+          type: string
+          example: 23452345
+        Detail:
+          type: object
+          properties:
+            ServiceAddress:
+              type: string
+              example: "1234 Any Street"
+            TotalAmountDue:
+              type: number
+              format: double
+              example: 2345.23
+
+    UtilityPayable:
+      allOf:
+        - $ref: '#/components/schemas/Payable'
+        - type: object
+          properties:
+            Type:
+              type: string
+              example: "UtilityBill"
+            BILL_NUMBER:
+              type: string
+              example: "g4ga35"
+            Principle:
+              type: number
+              format: double
+              example: 1.23
+            Discount:
+              type: number
+              format: double
+              example: 10.01
+            Fee:
+              type: number
+              format: double
+              example: 0.23
+    UtilityPayment:
+     type: object
+     properties:
+      Payment:
+        $ref: '#/components/schemas/Payment'
+      Service:
+        $ref: '#/components/schemas/UtilityService'
+      Payable:
+        $ref: '#/components/schemas/UtilityPayable'
+
+
+
+  ## Parking Tickets
+    TicketQuery:
+      description: "Parking Ticket payables query"
+      type: object
+      properties:
+        VehiclePlateNumber:
+          type: string
+          example: "ABCD234"
+    TicketQueryResp:
+      description: "Parking Ticket payables"
+      type: object
+      properties:
+        LastUpdatedTimestamp:
+         type: string
+         format: date-time
+         example: 2019-11-12T22:33:44.123-0400
+        Service:
+          $ref: '#/components/schemas/TicketService'
+        Payables:
+          type: array
+          items:
+            $ref: '#/components/schemas/TicketPayable'
+    TicketService:
+      type: object
+      properties:
+        Type:
+          type: string
+          enum: ["PARKINGTAGS"]
+          example: PARKINGTAGS
+        VehiclePlateNumber:
+          type: string
+          example: "ABCD234"
+    TicketPayable:
+      allOf:
+        - $ref: '#/components/schemas/Payable'
+        - type: object
+          properties:
+            Type:
+              type: string
+              example: "ParkingTicket"
+            TagNumber:
+              type: string
+              example: "fj23979723"
+            NSFRefNo:
+              type: string
+              example: "sadf3"
+    TicketPayment:
+     type: object
+     properties:
+      Payment:
+        $ref: '#/components/schemas/Payment'
+      Service:
+        $ref: '#/components/schemas/TicketService'
+      Payable:
+        $ref: '#/components/schemas/TicketPayable'
+
+
+## Shared objects
+
+    Payable:
+      type: object
+      properties:
+        Amount:
+          type: number
+          format: double
+          example: 15.12
+        DueDate:
+          type: string
+          format: date
+          example: "2019-11-01"
+    
+    
+    Payment:
+      type: object
+      required:
+        - TellerID
+        - PaymentType
+        - PaymentID
+        - GatewayPaymentID
+        - ConfirmationNumber
+        - TransactionTimestamp
+        - BatchID
+        - ProcessingFee
+        - TotalAmount
+        - CardType
+        - CardNum
+        - LineItemsIDs
+      properties:
+        TellerID:
+          type: string
+          example: PayIT
+        PaymentType:
+          type: string
+          example: CreditCard
+        PaymentID:
+          type: string
+          example: "hwhr-2344-34asdf-4235"
+        GatewayPaymentID:
+          type: string
+          example: "234-asd-342cf-35"
+        ConfirmationNumber:
+          type: string
+          example: "j93J22j"
+        TransactionTimestamp:
+         type: string
+         format: date-time
+         example: 2019-11-12T22:33:44.123-0400
+        BatchID:
+          type: string
+          example: "2019-11-01"
+        ProcessingFee:
+          type: number
+          format: double
+          example: 0.01
+        TotalAmount:
+          type: number
+          format: double
+          example: 1345.12
+        CardType:
+          type: string
+          example: visa
+        CardNum:
+          type: string
+          example: "4242********4242"
+        LineItemsIDs:
+          type: array
+          items:
+            type: string
+            example: ["ghjkjhfgh3", "sadfsdf2347y6"]
+        CancelledAmount:
+          type: number 
+          format: double
+        CancelledLineItemsIDs:
+          type: array
+          items:
+            type: string
+            example: []
