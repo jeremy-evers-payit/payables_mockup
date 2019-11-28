@@ -24,12 +24,12 @@
             "format" : "date-time"
           },
           "Service" : {
-            "$ref" : "#/components/schemas/TaxService"
+            "$ref" : "#/definitions/TaxService"
           },
           "Payables" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/components/schemas/TaxPayable"
+              "$ref" : "#/definitions/TaxPayable"
             }
           }
         },
@@ -56,13 +56,13 @@
             "example" : "Residential"
           },
           "Detail" : {
-            "$ref" : "#/components/schemas/TaxService_Detail"
+            "$ref" : "#/definitions/TaxService_Detail"
           }
         }
       },
       "TaxPayable" : {
         "allOf" : [ {
-          "$ref" : "#/components/schemas/Payable"
+          "$ref" : "#/definitions/Payable"
         }, {
           "type" : "object",
           "properties" : {
@@ -93,13 +93,13 @@
         "type" : "object",
         "properties" : {
           "Payment" : {
-            "$ref" : "#/components/schemas/Payment"
+            "$ref" : "#/definitions/Payment"
           },
           "Service" : {
-            "$ref" : "#/components/schemas/TaxService"
+            "$ref" : "#/definitions/TaxService"
           },
           "Payable" : {
-            "$ref" : "#/components/schemas/TaxPayable"
+            "$ref" : "#/definitions/TaxPayable"
           }
         }
       },
@@ -125,12 +125,12 @@
             "format" : "date-time"
           },
           "Service" : {
-            "$ref" : "#/components/schemas/UtilityService"
+            "$ref" : "#/definitions/UtilityService"
           },
           "Payables" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/components/schemas/UtilityPayable"
+              "$ref" : "#/definitions/UtilityPayable"
             }
           }
         },
@@ -153,13 +153,13 @@
             "example" : "23452345"
           },
           "Detail" : {
-            "$ref" : "#/components/schemas/UtilityService_Detail"
+            "$ref" : "#/definitions/UtilityService_Detail"
           }
         }
       },
       "UtilityPayable" : {
         "allOf" : [ {
-          "$ref" : "#/components/schemas/Payable"
+          "$ref" : "#/definitions/Payable"
         }, {
           "type" : "object",
           "properties" : {
@@ -193,13 +193,13 @@
         "type" : "object",
         "properties" : {
           "Payment" : {
-            "$ref" : "#/components/schemas/Payment"
+            "$ref" : "#/definitions/Payment"
           },
           "Service" : {
-            "$ref" : "#/components/schemas/UtilityService"
+            "$ref" : "#/definitions/UtilityService"
           },
           "Payable" : {
-            "$ref" : "#/components/schemas/UtilityPayable"
+            "$ref" : "#/definitions/UtilityPayable"
           }
         }
       },
@@ -221,12 +221,12 @@
             "format" : "date-time"
           },
           "Service" : {
-            "$ref" : "#/components/schemas/TicketService"
+            "$ref" : "#/definitions/TicketService"
           },
           "Payables" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/components/schemas/TicketPayable"
+              "$ref" : "#/definitions/TicketPayable"
             }
           }
         },
@@ -248,7 +248,7 @@
       },
       "TicketPayable" : {
         "allOf" : [ {
-          "$ref" : "#/components/schemas/Payable"
+          "$ref" : "#/definitions/Payable"
         }, {
           "type" : "object",
           "properties" : {
@@ -271,13 +271,13 @@
         "type" : "object",
         "properties" : {
           "Payment" : {
-            "$ref" : "#/components/schemas/Payment"
+            "$ref" : "#/definitions/Payment"
           },
           "Service" : {
-            "$ref" : "#/components/schemas/TicketService"
+            "$ref" : "#/definitions/TicketService"
           },
           "Payable" : {
-            "$ref" : "#/components/schemas/TicketPayable"
+            "$ref" : "#/definitions/TicketPayable"
           }
         }
       },
