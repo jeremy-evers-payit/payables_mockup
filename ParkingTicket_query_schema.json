@@ -1,0 +1,85 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "/",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"VehiclePlateNumber"
+	],
+	"properties": {
+		"VehiclePlateNumber": {
+			"type": "string",
+			"pattern": "^[a-zA-Z0-9]*$",
+			"maxLength": 12
+		},
+		"DRIVERLICENSE_NUMBER": {
+			"type": "string",
+			"pattern": "^[a-z_A-Z]{1}\\d{4}-\\d{5}-\\d{5}$",
+			"maxLength": 17
+		}
+	},
+	"definitions": {
+		"TicketQueryResp": {
+			"type": "object",
+			"properties": {
+				"LastUpdatedTimestamp": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Service": {
+					"$ref": "#/definitions/TicketService"
+				},
+				"Payables": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/TicketPayable"
+					}
+				}
+			},
+			"description": "Parking Ticket payables"
+		},
+		"TicketService": {
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"example": "PARKINGTAGS",
+					"enum": [
+						"PARKINGTAGS"
+					]
+				},
+				"VehiclePlateNumber": {
+					"type": "string",
+					"example": "ABCD234"
+				}
+			}
+		},
+		"TicketPayable": {
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"example": "ParkingTicket"
+				},
+				"Amount": {
+					"type": "number",
+					"format": "double",
+					"example": 15.12
+				},
+				"DueDate": {
+					"type": "string",
+					"format": "date",
+					"example": "2019-11-01"
+				},
+				"TagNumber": {
+					"type": "string",
+					"example": "fj23979723"
+				},
+				"NSFRefNo": {
+					"type": "string",
+					"example": "sadf3"
+				}
+			}
+		}
+	}
+}

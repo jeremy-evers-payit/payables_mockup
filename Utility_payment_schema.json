@@ -1,0 +1,186 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "/",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"Payment", "Service", "Payable"
+	],
+	"properties": {
+		"Payment": {
+			"$ref": "#/definitions/Payment"
+		},
+		"Service": {
+			"$ref": "#/definitions/UtilityService"
+		},
+		"Payable": {
+			"$ref": "#/definitions/UtilityPayable"
+		}
+	},
+	"definitions": {
+		"UtilityService": {
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"example": "UTILITY",
+					"enum": [
+						"UTILITY"
+					]
+				},
+				"CLIENT_NUMBER": {
+					"type": "string",
+					"example": "12343242",
+					"pattern": "^[0-9]*$"
+				},
+				"SERVICE_NUMBER": {
+					"type": "string",
+					"example": "23452345",
+					"pattern": "^[0-9]*$"
+				},
+				"Detail": {
+					"$ref": "#/definitions/UtilityService_Detail"
+				}
+			}
+		},
+		"UtilityPayable": {
+			"allOf": [
+				{
+					"$ref": "#/definitions/Payable"
+				}, {
+					"type": "object",
+					"properties": {
+						"Type": {
+							"type": "string",
+							"example": "UtilityBill",
+							"pattern": "^[a-zA-Z]*$"
+						},
+						"BILL_NUMBER": {
+							"type": "string",
+							"example": "g4ga35",
+							"pattern": "^[a-zA-Z]*$"
+						},
+						"Principle": {
+							"type": "number",
+							"format": "double",
+							"example": 1.23
+						},
+						"Discount": {
+							"type": "number",
+							"format": "double",
+							"example": 10.01
+						},
+						"Fee": {
+							"type": "number",
+							"format": "double",
+							"example": 0.23
+						}
+					}
+				}
+			]
+		},
+		"UtilityService_Detail": {
+			"type": "object",
+			"properties": {
+				"ServiceAddress": {
+					"type": "string",
+					"example": "1234 Any Street",
+					"pattern": "^[a-zA-Z., -]*$"
+				},
+				"TotalAmountDue": {
+					"type": "number",
+					"format": "double",
+					"example": 2345.23
+				}
+			}
+		},
+		"Payable": {
+			"type": "object",
+			"properties": {
+				"Amount": {
+					"type": "number",
+					"format": "double",
+					"example": 15.12
+				},
+				"DueDate": {
+					"type": "string",
+					"format": "date",
+					"example": "2019-11-01",
+					"pattern": "^[0-9-]*$"
+				}
+			}
+		},
+		"Payment": {
+			"required": [
+				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "GatewayPaymentID", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
+			],
+			"type": "object",
+			"properties": {
+				"TellerID": {
+					"type": "string",
+					"example": "PayIT"
+				},
+				"PaymentType": {
+					"type": "string",
+					"example": "CreditCard"
+				},
+				"PaymentID": {
+					"type": "string",
+					"example": "hwhr-2344-34asdf-4235"
+				},
+				"GatewayPaymentID": {
+					"type": "string",
+					"example": "234-asd-342cf-35"
+				},
+				"ConfirmationNumber": {
+					"type": "string",
+					"example": "j93J22j"
+				},
+				"TransactionTimestamp": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"BatchID": {
+					"type": "string",
+					"example": "2019-11-01"
+				},
+				"ProcessingFee": {
+					"type": "number",
+					"format": "double",
+					"example": 0.01
+				},
+				"TotalAmount": {
+					"type": "number",
+					"format": "double",
+					"example": 1345.12
+				},
+				"CardType": {
+					"type": "string",
+					"example": "visa"
+				},
+				"CardNum": {
+					"type": "string",
+					"example": "4242********4242"
+				},
+				"LineItemsIDs": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"example": "[\"ghjkjhfgh3\",\"sadfsdf2347y6\"]"
+					}
+				},
+				"CancelledAmount": {
+					"type": "number",
+					"format": "double"
+				},
+				"CancelledLineItemsIDs": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"example": "[]"
+					}
+				}
+			}
+		}
+	}
+}

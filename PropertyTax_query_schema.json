@@ -1,0 +1,100 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "/",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"ROLL_NUMBER", "TENANT_NUMBER"
+	],
+	"properties": {
+		"ROLL_NUMBER": {
+			"type": "string",
+			"example": "191406329000500000000",
+			"pattern": "^[0-9]*$"
+		},
+		"TENANT_NUMBER": {
+			"type": "string",
+			"example": "453534",
+			"pattern": "^[0-9]*$"
+		}
+	},
+	"definitions": {
+		"TaxQueryResp": {
+			"type": "object",
+			"properties": {
+				"LastUpdatedTimestamp": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Service": {
+					"$ref": "#/definitions/TaxService"
+				},
+				"Payables": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/TaxPayable"
+					}
+				}
+			},
+			"description": "Property Tax payables"
+		},
+		"TaxService": {
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"example": "TAX",
+					"enum": [
+						"TAX"
+					]
+				},
+				"ROLL_NUMBER": {
+					"type": "string",
+					"example": "191406329000500000000"
+				},
+				"TENANT_NUMBER": {
+					"type": "string",
+					"example": "453534"
+				},
+				"ROLL_TYPE": {
+					"type": "string",
+					"example": "Residential"
+				},
+				"Detail": {
+					"$ref": "#/definitions/TaxService_Detail"
+				}
+			}
+		},
+		"TaxPayable": {
+			"allOf": [
+				{
+					"$ref": "#/definitions/Payable"
+				}, {
+					"type": "object",
+					"properties": {
+						"Type": {
+							"type": "string",
+							"example": "PropertyTaxBill"
+						},
+						"BILL_NUMBER": {
+							"type": "string",
+							"example": "sdf345"
+						},
+						"Principle": {
+							"type": "number",
+							"example": 100.23
+						},
+						"Interest": {
+							"type": "number",
+							"example": 10.01
+						},
+						"Fee": {
+							"type": "number",
+							"example": 0.2
+						}
+					}
+				}
+			]
+		}
+	}
+}

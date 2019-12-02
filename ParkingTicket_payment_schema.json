@@ -1,0 +1,141 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "/",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"Payment", "Service", "Payable"
+	],
+	"properties": {
+		"Payment": {
+			"$ref": "#/definitions/Payment"
+		},
+		"Service": {
+			"$ref": "#/definitions/TicketService"
+		},
+		"Payable": {
+			"$ref": "#/definitions/TicketPayable"
+		}
+	},
+	"definitions": {
+		"TicketService": {
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"example": "PARKINGTAGS",
+					"enum": [
+						"PARKINGTAGS"
+					]
+				},
+				"VehiclePlateNumber": {
+					"type": "string",
+					"example": "ABCD234",
+					"pattern": "^[a-zA-Z0-9]*$"
+				}
+			}
+		},
+		"TicketPayable": {
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"example": "ParkingTicket"
+				},
+				"Amount": {
+					"type": "number",
+					"format": "double",
+					"example": 15.12
+				},
+				"DueDate": {
+					"type": "string",
+					"format": "date",
+					"example": "2019-11-01",
+					"pattern": "^[0-9-]*$"
+				},
+				"TagNumber": {
+					"type": "string",
+					"example": "fj23979723",
+					"pattern": "^[a-zA-Z0-9]*$"
+				},
+				"NSFRefNo": {
+					"type": "string",
+					"example": "sadf3",
+					"pattern": "^[a-zA-Z0-9]*$"
+				}
+			}
+		},
+		"Payment": {
+			"required": [
+				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "GatewayPaymentID", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
+			],
+			"type": "object",
+			"properties": {
+				"TellerID": {
+					"type": "string",
+					"example": "PayIT"
+				},
+				"PaymentType": {
+					"type": "string",
+					"example": "CreditCard"
+				},
+				"PaymentID": {
+					"type": "string",
+					"example": "hwhr-2344-34asdf-4235"
+				},
+				"GatewayPaymentID": {
+					"type": "string",
+					"example": "234-asd-342cf-35"
+				},
+				"ConfirmationNumber": {
+					"type": "string",
+					"example": "j93J22j"
+				},
+				"TransactionTimestamp": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"BatchID": {
+					"type": "string",
+					"example": "2019-11-01"
+				},
+				"ProcessingFee": {
+					"type": "number",
+					"format": "double",
+					"example": 0.01
+				},
+				"TotalAmount": {
+					"type": "number",
+					"format": "double",
+					"example": 1345.12
+				},
+				"CardType": {
+					"type": "string",
+					"example": "visa"
+				},
+				"CardNum": {
+					"type": "string",
+					"example": "4242********4242"
+				},
+				"LineItemsIDs": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"example": "[\"ghjkjhfgh3\",\"sadfsdf2347y6\"]"
+					}
+				},
+				"CancelledAmount": {
+					"type": "number",
+					"format": "double"
+				},
+				"CancelledLineItemsIDs": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"example": "[]"
+					}
+				}
+			}
+		}
+	}
+}
