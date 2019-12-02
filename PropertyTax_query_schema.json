@@ -65,36 +65,54 @@
 				}
 			}
 		},
+		"TaxService_Detail" : {
+			"type" : "object",
+			"properties" : {
+			  "PropertyLocation" : {
+				"type" : "string",
+				"example" : "55 John Street, Toronto"
+			  },
+			  "TotalAmountDue" : {
+				"type" : "number",
+				"example" : 6234.33
+			  }
+			}
+		},
 		"TaxPayable": {
-			"allOf": [
-				{
-					"$ref": "#/definitions/Payable"
-				}, {
-					"type": "object",
-					"properties": {
-						"Type": {
-							"type": "string",
-							"example": "PropertyTaxBill"
-						},
-						"BILL_NUMBER": {
-							"type": "string",
-							"example": "sdf345"
-						},
-						"Principle": {
-							"type": "number",
-							"example": 100.23
-						},
-						"Interest": {
-							"type": "number",
-							"example": 10.01
-						},
-						"Fee": {
-							"type": "number",
-							"example": 0.2
-						}
-					}
+			"type": "object",
+			"properties": {
+				"Amount": {
+					"type": "number",
+					"format": "double",
+					"example": 15.12
+				},
+				"DueDate": {
+					"type": "string",
+					"format": "date",
+					"example": "2019-11-01",
+					"pattern": "^[0-9-]*$"
+				},
+				"Type": {
+					"type": "string",
+					"example": "PropertyTaxBill"
+				},
+				"BILL_NUMBER": {
+					"type": "string",
+					"example": "sdf345"
+				},
+				"Principle": {
+					"type": "number",
+					"example": 100.23
+				},
+				"Interest": {
+					"type": "number",
+					"example": 10.01
+				},
+				"Fee": {
+					"type": "number",
+					"example": 0.2
 				}
-			]
+			}
 		}
 	}
 }
