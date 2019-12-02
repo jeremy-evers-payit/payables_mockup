@@ -165,8 +165,7 @@
 				"LineItemsIDs": {
 					"type": "array",
 					"items": {
-						"type": "string",
-						"example": "[\"ghjkjhfgh3\",\"sadfsdf2347y6\"]"
+						"type": "string"
 					}
 				},
 				"CancelledAmount": {
@@ -176,8 +175,7 @@
 				"CancelledLineItemsIDs": {
 					"type": "array",
 					"items": {
-						"type": "string",
-						"example": "[]"
+						"type": "string"
 					}
 				}
 			}
