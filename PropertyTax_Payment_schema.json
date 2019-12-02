@@ -4,40 +4,20 @@
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
-		"ROLL_NUMBER", "TENANT_NUMBER"
+		"Payment", "Service", "Payable"
 	],
 	"properties": {
-		"ROLL_NUMBER": {
-			"type": "string",
-			"example": "191406329000500000000",
-			"pattern": "^[0-9]*$"
+		"Payment": {
+			"$ref": "#/definitions/Payment"
 		},
-		"TENANT_NUMBER": {
-			"type": "string",
-			"example": "453534",
-			"pattern": "^[0-9]*$"
+		"Service": {
+			"$ref": "#/definitions/TaxService"
+		},
+		"Payable": {
+			"$ref": "#/definitions/TaxPayable"
 		}
 	},
 	"definitions": {
-		"TaxQueryResp": {
-			"type": "object",
-			"properties": {
-				"LastUpdatedTimestamp": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Service": {
-					"$ref": "#/definitions/TaxService"
-				},
-				"Payables": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/TaxPayable"
-					}
-				}
-			},
-			"description": "Property Tax payables"
-		},
 		"TaxService": {
 			"type": "object",
 			"properties": {
@@ -50,35 +30,72 @@
 				},
 				"ROLL_NUMBER": {
 					"type": "string",
-					"example": "191406329000500000000"
+					"example": "191406329000500000000",
+					"pattern": "^[0-9]*$"
 				},
 				"TENANT_NUMBER": {
 					"type": "string",
-					"example": "453534"
+					"example": "453534",
+					"pattern": "^[0-9]*$"
 				},
 				"ROLL_TYPE": {
 					"type": "string",
-					"example": "Residential"
+					"example": "Residential",
+					"pattern": "^[A-Za-z]*$"
 				},
 				"Detail": {
 					"$ref": "#/definitions/TaxService_Detail"
 				}
 			}
 		},
-		"TaxService_Detail" : {
-			"type" : "object",
-			"properties" : {
-			  "PropertyLocation" : {
-				"type" : "string",
-				"example" : "55 John Street, Toronto"
-			  },
-			  "TotalAmountDue" : {
-				"type" : "number",
-				"example" : 6234.33
-			  }
+		"TaxService_Detail": {
+			"type": "object",
+			"properties": {
+				"PropertyLocation": {
+					"type": "string",
+					"example": "55 John Street, Toronto",
+					"pattern": "^[a-zA-Z., -]*$"
+				},
+				"TotalAmountDue": {
+					"type": "number",
+					"example": 6234.33
+				}
 			}
 		},
 		"TaxPayable": {
+			"allOf": [
+				{
+					"$ref": "#/definitions/Payable"
+				}, {
+					"type": "object",
+					"properties": {
+						"Type": {
+							"type": "string",
+							"example": "PropertyTaxBill",
+							"pattern": "^[a-zA-Z]*$"
+						},
+						"BILL_NUMBER": {
+							"type": "string",
+							"example": "sdf345",
+							"pattern": "^[a-zA-Z0-9]*$"
+						},
+						"Principle": {
+							"type": "number",
+							"example": 100.23
+						},
+						"Interest": {
+							"type": "number",
+							"example": 10.01
+						},
+						"Fee": {
+							"type": "number",
+							"example": 0.2
+						}
+					}
+				}
+			]
+		},
+		"Payable": {
 			"type": "object",
 			"properties": {
 				"Amount": {
@@ -90,27 +107,79 @@
 					"type": "string",
 					"format": "date",
 					"example": "2019-11-01",
-					"pattern": "^[0-9-]*$"
-				},
-				"Type": {
+			"pattern": "^[0-90-]*$"					
+				}
+			}
+		},
+		"Payment": {
+			"required": [
+				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "GatewayPaymentID", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
+			],
+			"type": "object",
+			"properties": {
+				"TellerID": {
 					"type": "string",
-					"example": "PropertyTaxBill"
+					"example": "PayIT"
 				},
-				"BILL_NUMBER": {
+				"PaymentType": {
 					"type": "string",
-					"example": "sdf345"
+					"example": "CreditCard"
 				},
-				"Principle": {
-					"type": "number",
-					"example": 100.23
+				"PaymentID": {
+					"type": "string",
+					"example": "hwhr-2344-34asdf-4235"
 				},
-				"Interest": {
-					"type": "number",
-					"example": 10.01
+				"GatewayPaymentID": {
+					"type": "string",
+					"example": "234-asd-342cf-35"
 				},
-				"Fee": {
+				"ConfirmationNumber": {
+					"type": "string",
+					"example": "j93J22j"
+				},
+				"TransactionTimestamp": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"BatchID": {
+					"type": "string",
+					"example": "2019-11-01"
+				},
+				"ProcessingFee": {
 					"type": "number",
-					"example": 0.2
+					"format": "double",
+					"example": 0.01
+				},
+				"TotalAmount": {
+					"type": "number",
+					"format": "double",
+					"example": 1345.12
+				},
+				"CardType": {
+					"type": "string",
+					"example": "visa"
+				},
+				"CardNum": {
+					"type": "string",
+					"example": "4242********4242"
+				},
+				"LineItemsIDs": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"example": "[\"ghjkjhfgh3\",\"sadfsdf2347y6\"]"
+					}
+				},
+				"CancelledAmount": {
+					"type": "number",
+					"format": "double"
+				},
+				"CancelledLineItemsIDs": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"example": "[]"
+					}
 				}
 			}
 		}
