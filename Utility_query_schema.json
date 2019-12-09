@@ -62,6 +62,35 @@
 				}
 			}
 		},
+		"UtilityService_Detail": {
+			"type": "object",
+			"properties": {
+				"ServiceAddress": {
+					"type": "string",
+					"example": "1234 Any Street"
+				},
+				"TotalAmountDue": {
+					"type": "number",
+					"format": "double",
+					"example": 2345.23
+				}
+			}
+		},
+		"Payable": {
+			"type": "object",
+			"properties": {
+				"Amount": {
+					"type": "number",
+					"format": "double",
+					"example": 15.12
+				},
+				"DueDate": {
+					"type": "string",
+					"format": "date",
+					"example": "2019-11-01"
+				}
+			}
+		},
 		"UtilityPayable": {
 			"allOf": [
 				{
