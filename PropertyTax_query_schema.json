@@ -65,17 +65,17 @@
 				}
 			}
 		},
-		"TaxService_Detail" : {
-			"type" : "object",
-			"properties" : {
-			  "PropertyLocation" : {
-				"type" : "string",
-				"example" : "55 John Street, Toronto"
-			  },
-			  "TotalAmountDue" : {
-				"type" : "number",
-				"example" : 6234.33
-			  }
+		"TaxService_Detail": {
+			"type": "object",
+			"properties": {
+				"PropertyLocation": {
+					"type": "string",
+					"example": "55 John Street, Toronto"
+				},
+				"TotalAmountDue": {
+					"type": "number",
+					"example": 6234.33
+				}
 			}
 		},
 		"TaxPayable": {
