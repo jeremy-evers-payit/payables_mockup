@@ -4,7 +4,7 @@
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
-		"VehiclePlateNumber"
+		"VehiclePlateNumber", "TagNumber"
 	],
 	"properties": {
 		"VehiclePlateNumber": {
@@ -12,10 +12,10 @@
 			"pattern": "^[a-zA-Z0-9]*$",
 			"maxLength": 12
 		},
-		"DRIVERLICENSE_NUMBER": {
+		"TagNumber": {
 			"type": "string",
-			"pattern": "^[a-z_A-Z]{1}\\d{4}-\\d{5}-\\d{5}$",
-			"maxLength": 17
+			"pattern": "^[a-z_A-Z]{2}\\d{6}$|^\\d{8}$",
+			"example": "AB123456"
 		}
 	},
 	"definitions": {
@@ -61,7 +61,7 @@
 					"type": "string",
 					"example": "ParkingTicket"
 				},
-				"Amount": {
+				"AmountDue": {
 					"type": "number",
 					"format": "double",
 					"example": 15.12
@@ -73,7 +73,8 @@
 				},
 				"TagNumber": {
 					"type": "string",
-					"example": "fj23979723"
+					"pattern": "^[a-z_A-Z]{2}\\d{6}$|^\\d{8}$",
+					"example": "AB123456"
 				},
 				"NSFRefNo": {
 					"type": "string",
