@@ -16,6 +16,15 @@
 			"type": "string",
 			"example": "453534",
 			"pattern": "^[0-9]*$"
+		},
+		"LAST_NAME": {
+			"type": "string",
+			"example": "Doe"
+		},
+		"POSTAL_CODE": {
+			"type": "string",
+			"example": "M1M1M1",
+			"pattern": "^[A-Za-z]\\d[A-Za-z] ?\\d[A-Za-z]\\d$"
 		}
 	},
 	"definitions": {
