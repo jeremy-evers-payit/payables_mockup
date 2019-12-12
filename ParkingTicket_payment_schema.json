@@ -32,6 +32,11 @@
 					"type": "string",
 					"example": "ABCD234",
 					"pattern": "^[a-zA-Z0-9]*$"
+				},
+				"TagNumber": {
+					"type": "string",
+					"pattern": "^[a-z_A-Z]{2}\\d{6}$|^\\d{8}$",
+					"example": "AB123456"
 				}
 			}
 		},
@@ -42,7 +47,7 @@
 					"type": "string",
 					"example": "ParkingTicket"
 				},
-				"Amount": {
+				"AmountDue": {
 					"type": "number",
 					"format": "double",
 					"example": 15.12
@@ -52,6 +57,17 @@
 					"format": "date",
 					"example": "2019-11-01",
 					"pattern": "^[0-9-]*$"
+				},
+				"PaidAmount": {
+					"type": "number",
+					"format": "double",
+					"example": 15.12,
+					"description": "Amount paid for this line-item"
+				},
+				"LineItemFee": {
+					"type": "number",
+					"format": "double",
+					"example": 0
 				},
 				"TagNumber": {
 					"type": "string",
@@ -120,7 +136,8 @@
 				"LineItemsIDs": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"type": "string",
+						"example": "[\"ghjkjhfgh3\",\"sadfsdf2347y6\"]"
 					}
 				},
 				"CancelledAmount": {
@@ -130,7 +147,8 @@
 				"CancelledLineItemsIDs": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"type": "string",
+						"example": "[]"
 					}
 				}
 			}
