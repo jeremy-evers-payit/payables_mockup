@@ -103,10 +103,6 @@
 					"type": "string",
 					"example": "hwhr-2344-34asdf-4235"
 				},
-				"GatewayPaymentID": {
-					"type": "string",
-					"example": "234-asd-342cf-35"
-				},
 				"ConfirmationNumber": {
 					"type": "string",
 					"example": "j93J22j"
@@ -120,6 +116,11 @@
 					"example": "2019-11-01"
 				},
 				"ProcessingFee": {
+					"type": "number",
+					"format": "double",
+					"example": 0.01
+				},
+				"ConvenienceFee": {
 					"type": "number",
 					"format": "double",
 					"example": 0.01
