@@ -4,7 +4,7 @@
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
-		"CLIENT_NUMBER", "SERVICE_NUMBER"
+		"CLIENT_NUMBER", "SERVICE_NUMBER", "LAST_NAME", "POSTAL_CODE"
 	],
 	"properties": {
 		"CLIENT_NUMBER": {
@@ -16,6 +16,15 @@
 			"type": "string",
 			"example": "23452345",
 			"pattern": "^[0-9]*$"
+		},
+		"LAST_NAME": {
+			"type": "string",
+			"example": "Doe"
+		},
+		"POSTAL_CODE": {
+			"type": "string",
+			"example": "M1M1M1",
+			"pattern": "^[A-Za-z]\\d[A-Za-z] ?\\d[A-Za-z]\\d$"
 		}
 	},
 	"description": "Utility payables query",
@@ -79,7 +88,7 @@
 		"Payable": {
 			"type": "object",
 			"properties": {
-				"Amount": {
+				"AmountDue": {
 					"type": "number",
 					"format": "double",
 					"example": 15.12
