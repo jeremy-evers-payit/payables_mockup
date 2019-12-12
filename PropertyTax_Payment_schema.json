@@ -98,22 +98,37 @@
 		"Payable": {
 			"type": "object",
 			"properties": {
-				"Amount": {
+				"LineItemID": {
+					"type": "string"				
+				},
+				"AmountDue": {
 					"type": "number",
 					"format": "double",
-					"example": 15.12
+					"example": 15.12,
+					"description":"Amount due for this payable, such as ticket amount or bill amount"
 				},
 				"DueDate": {
 					"type": "string",
 					"format": "date",
 					"example": "2019-11-01",
-			"pattern": "^[0-90-]*$"					
+					"pattern": "^[0-90-]*$"					
+				},
+				"PaidAmount": {
+					"type": "number",
+					"format":"double",
+					"example":15.12,
+					"description":"Amount paid for this line-item"
+				},
+				"LineItemFee": {
+					"type": "number",
+					"format":"double",
+					"example":0
 				}
 			}
 		},
 		"Payment": {
 			"required": [
-				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "GatewayPaymentID", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
+				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "LineItemsIDs", "PaymentID", "PaymentType", "TellerID", "TotalAmount", "TransactionTimestamp"
 			],
 			"type": "object",
 			"properties": {
@@ -127,15 +142,13 @@
 				},
 				"PaymentID": {
 					"type": "string",
-					"example": "hwhr-2344-34asdf-4235"
-				},
-				"GatewayPaymentID": {
-					"type": "string",
-					"example": "234-asd-342cf-35"
+					"example": "hwhr-2344-34asdf-4235",
+					"description":"The unique identifier for the payment transaction"
 				},
 				"ConfirmationNumber": {
 					"type": "string",
-					"example": "j93J22j"
+					"example": "j93J22j",
+					"description":"The bank confirmation number that customers will see on their credit-card bill and reciept."
 				},
 				"TransactionTimestamp": {
 					"type": "string",
@@ -146,6 +159,11 @@
 					"example": "2019-11-01"
 				},
 				"ProcessingFee": {
+					"type": "number",
+					"format": "double",
+					"example": 0.01
+				},
+				"ConvenienceFee": {
 					"type": "number",
 					"format": "double",
 					"example": 0.01
