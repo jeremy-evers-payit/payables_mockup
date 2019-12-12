@@ -4,7 +4,7 @@
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
-		"ROLL_NUMBER", "TENANT_NUMBER"
+		"ROLL_NUMBER", "TENANT_NUMBER", "LAST_NAME", "POSTAL_CODE"
 	],
 	"properties": {
 		"ROLL_NUMBER": {
