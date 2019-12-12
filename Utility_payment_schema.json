@@ -97,16 +97,31 @@
 		"Payable": {
 			"type": "object",
 			"properties": {
-				"Amount": {
+				"LineItemID": {
+					"type": "string"
+				},
+				"AmountDue": {
 					"type": "number",
 					"format": "double",
-					"example": 15.12
+					"example": 15.12,
+					"description":"Amount due for this payable, such as ticket amount or bill amount"					
 				},
 				"DueDate": {
 					"type": "string",
 					"format": "date",
 					"example": "2019-11-01",
 					"pattern": "^[0-9-]*$"
+				},
+				"PaidAmount": {
+					"type": "number",
+					"format": "double",
+					"example": 15.12,
+					"description": "Amount paid for this line-item"
+				},
+				"LineItemFee": {
+					"type": "number",
+					"format": "double",
+					"example": 0
 				}
 			}
 		},
@@ -128,10 +143,6 @@
 					"type": "string",
 					"example": "hwhr-2344-34asdf-4235"
 				},
-				"GatewayPaymentID": {
-					"type": "string",
-					"example": "234-asd-342cf-35"
-				},
 				"ConfirmationNumber": {
 					"type": "string",
 					"example": "j93J22j"
@@ -145,6 +156,11 @@
 					"example": "2019-11-01"
 				},
 				"ProcessingFee": {
+					"type": "number",
+					"format": "double",
+					"example": 0.01
+				},
+				"ConvenienceFee": {
 					"type": "number",
 					"format": "double",
 					"example": 0.01
@@ -165,7 +181,8 @@
 				"LineItemsIDs": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"type": "string",
+						"example": "[\"ghjkjhfgh3\",\"sadfsdf2347y6\"]"
 					}
 				},
 				"CancelledAmount": {
@@ -175,7 +192,8 @@
 				"CancelledLineItemsIDs": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"type": "string",
+						"example": "[]"
 					}
 				}
 			}
