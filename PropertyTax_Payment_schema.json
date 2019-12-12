@@ -99,7 +99,8 @@
 			"type": "object",
 			"properties": {
 				"LineItemID": {
-					"type": "string"				
+					"type": "string",
+					"example": "5425432"				
 				},
 				"AmountDue": {
 					"type": "number",
