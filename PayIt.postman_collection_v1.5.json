@@ -34,11 +34,6 @@
 						"type": "text"
 					},
 					{
-						"key": "x-api-key",
-						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-						"type": "text"
-					},
-					{
 						"key": "x-mock-response-name",
 						"value": "PropertyTaxQuery_success",
 						"type": "text"
@@ -84,11 +79,6 @@
 							{
 								"key": "Origin",
 								"value": "https://some.toronto.ca",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
 								"type": "text"
 							},
 							{
@@ -224,11 +214,6 @@
 							{
 								"key": "Origin",
 								"value": "https://some.toronto.ca",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
 								"type": "text"
 							},
 							{
@@ -374,11 +359,6 @@
 						"disabled": true
 					},
 					{
-						"key": "x-api-key",
-						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-						"type": "text"
-					},
-					{
 						"key": "x-mock-response-name",
 						"value": "PropertyTaxPayment_missing_OriginHeader",
 						"type": "text"
@@ -426,11 +406,6 @@
 								"value": "https://some.toronto.ca",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-								"type": "text"
 							},
 							{
 								"key": "x-mock-response-name",
@@ -541,11 +516,6 @@
 							{
 								"key": "Origin",
 								"value": "https://some.toronto.ca",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
 								"type": "text"
 							},
 							{
@@ -686,11 +656,6 @@
 						"type": "text"
 					},
 					{
-						"key": "x-api-key",
-						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-						"type": "text"
-					},
-					{
 						"key": "x-mock-response-name",
 						"value": "ParkingTicketQuery_invalidRequest",
 						"type": "text"
@@ -736,11 +701,6 @@
 							{
 								"key": "Origin",
 								"value": "https://some.toronto.ca",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
 								"type": "text"
 							},
 							{
@@ -883,11 +843,6 @@
 								"type": "text"
 							},
 							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-								"type": "text"
-							},
-							{
 								"key": "x-mock-response-name",
 								"value": "ParkingTicketQuery_success",
 								"type": "text"
@@ -1025,11 +980,6 @@
 						"type": "text"
 					},
 					{
-						"key": "x-api-key",
-						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-						"type": "text"
-					},
-					{
 						"key": "x-mock-response-name",
 						"value": "ParkingTicketPayment_success",
 						"type": "text"
@@ -1077,11 +1027,6 @@
 								"value": "https://some.toronto.ca",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-								"type": "text"
 							},
 							{
 								"key": "x-mock-response-name",
@@ -1192,11 +1137,6 @@
 							{
 								"key": "Origin",
 								"value": "https://some.toronto.ca",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
 								"type": "text"
 							},
 							{
@@ -1337,11 +1277,6 @@
 						"type": "text"
 					},
 					{
-						"key": "x-api-key",
-						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-						"type": "text"
-					},
-					{
 						"key": "x-mock-response-name",
 						"value": "UtilityPayQuery_invalidRequest",
 						"type": "text"
@@ -1387,11 +1322,6 @@
 							{
 								"key": "Origin",
 								"value": "https://some.toronto.ca",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
 								"type": "text"
 							},
 							{
@@ -1527,11 +1457,6 @@
 							{
 								"key": "Origin",
 								"value": "https://some.toronto.ca",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
 								"type": "text"
 							},
 							{
@@ -1677,11 +1602,6 @@
 						"disabled": true
 					},
 					{
-						"key": "x-api-key",
-						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-						"type": "text"
-					},
-					{
 						"key": "x-mock-response-name",
 						"value": "UtilityPayPayment_missing_OriginHeader",
 						"type": "text"
@@ -1727,11 +1647,6 @@
 							{
 								"key": "Origin",
 								"value": "https://some.toronto.ca",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
 								"type": "text"
 							},
 							{
@@ -1869,11 +1784,6 @@
 								"value": "https://some.toronto.ca",
 								"type": "text",
 								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
-								"type": "text"
 							},
 							{
 								"key": "x-mock-response-name",
