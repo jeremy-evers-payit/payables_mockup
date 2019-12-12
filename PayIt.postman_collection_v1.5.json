@@ -1,0 +1,1977 @@
+{
+	"info": {
+		"_postman_id": "35c69bdc-4603-425b-becc-245292cd3886",
+		"name": "PayIt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PropertyTaxQuery",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "af44a3aa-d66b-4d5b-9241-71902366d980",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "https://some.toronto.ca",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+						"type": "text"
+					},
+					{
+						"key": "x-mock-response-name",
+						"value": "PropertyTaxQuery_success",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ROLL_NUMBER\": \"191406329000500000000\",\r\n  \"TENANT_NUMBER\": \"453534\",\r\n  \"LAST_NAME\": \"Doe\",\r\n  \"POSTAL_CODE\": \"M1M1M1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/tax/query",
+					"protocol": "https",
+					"host": [
+						"f51e05ee-5385-4188-bc70-62e0825471ca",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"payables",
+						"tax",
+						"query"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PropertyTaxQuery_success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "PropertyTaxQuery_success",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"ROLL_NUMBER\": \"191406329000500000000\",\r\n\t\"TENANT_NUMBER\": \"453534\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/tax/query",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"tax",
+								"query"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:37:56 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"221-s8ZIuQzGRaVW5uhtGgjEgfvnAvg\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de6a140011304d0"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575923936"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=981b13795715a1cc"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=a81b662cf49816be"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "545"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"LastUpdatedTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n  \"Service\": {\r\n    \"Type\": \"TAX\",\r\n    \"ROLL_NUMBER\": 191406329000500000000,\r\n    \"TENANT_NUMBER\": 453534,\r\n    \"ROLL_TYPE\": \"Residential\",\r\n    \"Detail\": {\r\n      \"PropertyLocation\": \"{{$randomStreetAddress}}\",\r\n      \"TotalAmountDue\": {{$randomPrice}}\r\n    }\r\n  },\r\n  \"Payables\": [\r\n    {\r\n      \"Amount\": 15.12,\r\n      \"DueDate\": \"2019-11-01\",\r\n      \"Type\": \"PropertyTaxBill\",\r\n      \"BILL_NUMBER\": \"{{$randomBankAccountBic}}\",\r\n      \"Principle\": 100.23,\r\n      \"Interest\": 10.01,\r\n      \"Fee\": 0.2\r\n    }\r\n  ]\r\n}"
+				},
+				{
+					"name": "PropertyTaxQuery_invalidRollNumber",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "PropertyTaxQuery_invalidRollNumber",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"ROLL_NUMBER\": \"191406329000500000000\",\r\n\t\"TENANT_NUMBER\": \"453534\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/tax/query",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"tax",
+								"query"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:39:14 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de6a18c00dc2223"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924014"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=ace76cd0c23ac51d"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=36a0e3698e9d8971"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "PropertyTaxPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "https://some.toronto.ca",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-api-key",
+						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+						"type": "text"
+					},
+					{
+						"key": "x-mock-response-name",
+						"value": "PropertyTaxPayment_missing_OriginHeader",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Payment\": {\r\n    \"TellerID\": \"PayIT\",\r\n    \"PaymentType\": \"CreditCard\",\r\n    \"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n    \"ConfirmationNumber\": \"j93J22j\",\r\n    \"TransactionTimestamp\": \"2019-12-12T19:09:16.200Z\",\r\n    \"BatchID\": \"2019-11-01\",\r\n    \"ProcessingFee\": 0.01,\r\n    \"ConvenienceFee\": 0.01,\r\n    \"TotalAmount\": 1345.12,\r\n    \"CardType\": \"visa\",\r\n    \"CardNum\": \"4242********4242\",\r\n    \"LineItemsIDs\": [\r\n      \"string\"\r\n    ],\r\n    \"CancelledAmount\": 0,\r\n    \"CancelledLineItemsIDs\": [\r\n      \"string\"\r\n    ]\r\n  },\r\n  \"Service\": {\r\n    \"Type\": \"TAX\",\r\n    \"ROLL_NUMBER\": \"191406329000500000000\",\r\n    \"TENANT_NUMBER\": \"453534\",\r\n    \"ROLL_TYPE\": \"Residential\",\r\n    \"Detail\": {\r\n      \"PropertyLocation\": \"55 John Street, Toronto\",\r\n      \"TotalAmountDue\": 6234.33\r\n    }\r\n  },\r\n  \"Payable\": {\r\n    \"LineItemID\": \"5425432\",\r\n    \"AmountDue\": 15.12,\r\n    \"DueDate\": \"2019-11-01\",\r\n    \"PaidAmount\": 15.12,\r\n    \"LineItemFee\": 0,\r\n    \"Type\": \"PropertyTaxBill\",\r\n    \"BILL_NUMBER\": \"sdf345\",\r\n    \"Principle\": 100.23,\r\n    \"Interest\": 10.01,\r\n    \"Fee\": 0.2\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/tax/payment",
+					"protocol": "https",
+					"host": [
+						"f51e05ee-5385-4188-bc70-62e0825471ca",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"payables",
+						"tax",
+						"payment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PropertyTaxPayment_missing_OriginHeader",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "PropertyTaxPayment_missing_OriginHeader",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Payment\": {\r\n\t\t\"TellerID\": \"PayIT\",\r\n\t\t\"PaymentType\": \"CreditCard\",\r\n\t\t\"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n\t\t\"GatewayPaymentID\": \"234-asd-342cf-35\",\r\n\t\t\"ConfirmationNumber\": \"j93J22j\",\r\n\t\t\"TransactionTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n\t\t\"BatchID\": \"2019-11-01\",\r\n\t\t\"ProcessingFee\": 0.01,\r\n\t\t\"TotalAmount\": 1345.12,\r\n\t\t\"CardType\": \"visa\",\r\n\t\t\"CardNum\": \"4242********4242\",\r\n\t\t\"LineItemsIDs\": [\r\n\t\t\t\"ghjkjhfgh3\", \"sadfsdf2347y6\"\r\n\t\t],\r\n\t\t\"CancelledAmount\": 0,\r\n\t\t\"CancelledLineItemsIDs\": []\r\n\t},\r\n\t\"Service\": {\r\n\t\t\"Type\": \"TAX\",\r\n\t\t\"ROLL_NUMBER\": 191406329000500000000,\r\n\t\t\"TENANT_NUMBER\": 453534,\r\n\t\t\"ROLL_TYPE\": \"Residential\",\r\n\t\t\"Detail\": {\r\n\t\t\t\"PropertyLocation\": \"55 John Street, Toronto\",\r\n\t\t\t\"TotalAmountDue\": 6234.33\r\n\t\t}\r\n\t},\r\n\t\"Payable\": {\r\n\t\t\"Amount\": 15.12,\r\n\t\t\"DueDate\": \"2019-11-01\",\r\n\t\t\"Type\": \"PropertyTaxBill\",\r\n\t\t\"BILL_NUMBER\": \"sdf345\",\r\n\t\t\"Principle\": 100.23,\r\n\t\t\"Interest\": 10.01,\r\n\t\t\"Fee\": 0.2\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/tax/payment",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"tax",
+								"payment"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "null"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:46:38 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924415"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=3bf10ae5fc9dad7d"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=0f0bb2e5a8020d4b"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "PropertyTaxPayment_success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "PropertyTaxPayment_success",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Payment\": {\r\n\t\t\"TellerID\": \"PayIT\",\r\n\t\t\"PaymentType\": \"CreditCard\",\r\n\t\t\"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n\t\t\"GatewayPaymentID\": \"234-asd-342cf-35\",\r\n\t\t\"ConfirmationNumber\": \"j93J22j\",\r\n\t\t\"TransactionTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n\t\t\"BatchID\": \"2019-11-01\",\r\n\t\t\"ProcessingFee\": 0.01,\r\n\t\t\"TotalAmount\": 1345.12,\r\n\t\t\"CardType\": \"visa\",\r\n\t\t\"CardNum\": \"4242********4242\",\r\n\t\t\"LineItemsIDs\": [\r\n\t\t\t\"ghjkjhfgh3\", \"sadfsdf2347y6\"\r\n\t\t],\r\n\t\t\"CancelledAmount\": 0,\r\n\t\t\"CancelledLineItemsIDs\": []\r\n\t},\r\n\t\"Service\": {\r\n\t\t\"Type\": \"TAX\",\r\n\t\t\"ROLL_NUMBER\": 191406329000500000000,\r\n\t\t\"TENANT_NUMBER\": 453534,\r\n\t\t\"ROLL_TYPE\": \"Residential\",\r\n\t\t\"Detail\": {\r\n\t\t\t\"PropertyLocation\": \"55 John Street, Toronto\",\r\n\t\t\t\"TotalAmountDue\": 6234.33\r\n\t\t}\r\n\t},\r\n\t\"Payable\": {\r\n\t\t\"Amount\": 15.12,\r\n\t\t\"DueDate\": \"2019-11-01\",\r\n\t\t\"Type\": \"PropertyTaxBill\",\r\n\t\t\"BILL_NUMBER\": \"sdf345\",\r\n\t\t\"Principle\": 100.23,\r\n\t\t\"Interest\": 10.01,\r\n\t\t\"Fee\": 0.2\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/tax/payment",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"tax",
+								"payment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:45:56 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de7c87a01285df0"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924415"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=68d25da40f21a2ab"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=c3d1d1178147fe30"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "ParkingTicketQuery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "https://some.toronto.ca",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+						"type": "text"
+					},
+					{
+						"key": "x-mock-response-name",
+						"value": "ParkingTicketQuery_invalidRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"VehiclePlateNumber\": \"string\",\r\n  \"TagNumber\": \"AB123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/parkingticket/query",
+					"protocol": "https",
+					"host": [
+						"f51e05ee-5385-4188-bc70-62e0825471ca",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"payables",
+						"parkingticket",
+						"query"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ParkingTicketQuery_invalidRequest",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "ParkingTicketQuery_invalidRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"VehiclePlateNumber\": \"ABCD234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/parkingticket/query",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"parkingticket",
+								"query"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:42:18 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de6b5ec0101c041"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924161"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=fa55a0e77dcb3384"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=b9df1c42bd614a24"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "ParkingTicketQuery_success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "ParkingTicketQuery_success",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"VehiclePlateNumber\": \"ABCD234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/parkingticket/query",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"parkingticket",
+								"query"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:41:41 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"154-6fbYor3mTkWLdhutkQrksCxJ1NA\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de6b5b90101c021"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924161"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=ca6d8b478231952f"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=62f5c8c6c0eb704a"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "340"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"LastUpdatedTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n  \"Service\": {\r\n    \"Type\": \"PARKINGTAGS\",\r\n    \"VehiclePlateNumber\": \"ABCD234\"\r\n  },\r\n  \"Payables\": [\r\n    {\r\n      \"Amount\": {{$randomPrice}},\r\n      \"DueDate\": \"2019-11-01\",\r\n      \"Type\": \"ParkingTicket\",\r\n      \"TagNumber\": \"{{$randomBankAccountBic}}\",\r\n      \"NSFRefNo\": \"{{$randomBankAccountBic}}\"\r\n    }\r\n  ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "ParkingTicketPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "https://some.toronto.ca",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+						"type": "text"
+					},
+					{
+						"key": "x-mock-response-name",
+						"value": "ParkingTicketPayment_success",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Payment\": {\r\n    \"TellerID\": \"PayIT\",\r\n    \"PaymentType\": \"CreditCard\",\r\n    \"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n    \"ConfirmationNumber\": \"j93J22j\",\r\n    \"TransactionTimestamp\": \"2019-12-12T19:13:03.413Z\",\r\n    \"BatchID\": \"2019-11-01\",\r\n    \"ProcessingFee\": 0.01,\r\n    \"ConvenienceFee\": 0.01,\r\n    \"TotalAmount\": 1345.12,\r\n    \"CardType\": \"visa\",\r\n    \"CardNum\": \"4242********4242\",\r\n    \"LineItemsIDs\": [\r\n      \"string\"\r\n    ],\r\n    \"CancelledAmount\": 0,\r\n    \"CancelledLineItemsIDs\": [\r\n      \"string\"\r\n    ]\r\n  },\r\n  \"Service\": {\r\n    \"Type\": \"PARKINGTAGS\",\r\n    \"VehiclePlateNumber\": \"ABCD234\",\r\n    \"TagNumber\": \"AB123456\"\r\n  },\r\n  \"Payable\": {\r\n    \"Type\": \"ParkingTicket\",\r\n    \"LineItemID\": \"5425432\",\r\n    \"AmountDue\": 15.12,\r\n    \"DueDate\": \"2019-11-01\",\r\n    \"PaidAmount\": 15.12,\r\n    \"LineItemFee\": 0,\r\n    \"TagNumber\": \"fj23979723\",\r\n    \"NSFRefNo\": \"sadf3\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/parkingticket/payment",
+					"protocol": "https",
+					"host": [
+						"f51e05ee-5385-4188-bc70-62e0825471ca",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"payables",
+						"parkingticket",
+						"payment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ParkingTicketPayment_missing_OriginHeader",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "ParkingTicketPayment_missing_OriginHeader",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Payment\": {\r\n\t\t\"TellerID\": \"PayIT\",\r\n\t\t\"PaymentType\": \"CreditCard\",\r\n\t\t\"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n\t\t\"GatewayPaymentID\": \"234-asd-342cf-35\",\r\n\t\t\"ConfirmationNumber\": \"j93J22j\",\r\n\t\t\"TransactionTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n\t\t\"BatchID\": \"2019-11-01\",\r\n\t\t\"ProcessingFee\": 0.01,\r\n\t\t\"TotalAmount\": 1345.12,\r\n\t\t\"CardType\": \"visa\",\r\n\t\t\"CardNum\": \"4242********4242\",\r\n\t\t\"LineItemsIDs\": [\r\n\t\t\t\"ghjkjhfgh3\", \"sadfsdf2347y6\"\r\n\t\t],\r\n\t\t\"CancelledAmount\": 0,\r\n\t\t\"CancelledLineItemsIDs\": []\r\n\t},\r\n\t\"Service\": {\r\n\t\t\"Type\": \"PARKINGTAGS\",\r\n\t\t\"VehiclePlateNumber\": \"ABCD234\"\r\n\t},\r\n\t\"Payable\": {\r\n\t\t\"Amount\": 15.12,\r\n\t\t\"DueDate\": \"2019-11-01\",\r\n\t\t\"Type\": \"ParkingTicket\",\r\n\t\t\"TagNumber\": \"fj23979723\",\r\n\t\t\"NSFRefNo\": \"sadf3\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/parkingticket/payment",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"parkingticket",
+								"payment"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "null"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:48:24 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924530"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=d5345072a8094f16"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=20e65ff581a05af6"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "ParkingTicketPayment_success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "ParkingTicketPayment_success",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Payment\": {\r\n\t\t\"TellerID\": \"PayIT\",\r\n\t\t\"PaymentType\": \"CreditCard\",\r\n\t\t\"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n\t\t\"GatewayPaymentID\": \"234-asd-342cf-35\",\r\n\t\t\"ConfirmationNumber\": \"j93J22j\",\r\n\t\t\"TransactionTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n\t\t\"BatchID\": \"2019-11-01\",\r\n\t\t\"ProcessingFee\": 0.01,\r\n\t\t\"TotalAmount\": 1345.12,\r\n\t\t\"CardType\": \"visa\",\r\n\t\t\"CardNum\": \"4242********4242\",\r\n\t\t\"LineItemsIDs\": [\r\n\t\t\t\"ghjkjhfgh3\", \"sadfsdf2347y6\"\r\n\t\t],\r\n\t\t\"CancelledAmount\": 0,\r\n\t\t\"CancelledLineItemsIDs\": []\r\n\t},\r\n\t\"Service\": {\r\n\t\t\"Type\": \"PARKINGTAGS\",\r\n\t\t\"VehiclePlateNumber\": \"ABCD234\"\r\n\t},\r\n\t\"Payable\": {\r\n\t\t\"Amount\": 15.12,\r\n\t\t\"DueDate\": \"2019-11-01\",\r\n\t\t\"Type\": \"ParkingTicket\",\r\n\t\t\"TagNumber\": \"fj23979723\",\r\n\t\t\"NSFRefNo\": \"sadf3\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/parkingticket/payment",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"parkingticket",
+								"payment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:47:50 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de7c90e015309a2"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924530"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=bca276863cdb6b6c"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=78f0464098706dfa"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "UtilityPayQuery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "https://some.toronto.ca",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+						"type": "text"
+					},
+					{
+						"key": "x-mock-response-name",
+						"value": "UtilityPayQuery_invalidRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"CLIENT_NUMBER\": \"12343242\",\r\n  \"SERVICE_NUMBER\": \"23452345\",\r\n  \"LAST_NAME\": \"Doe\",\r\n  \"POSTAL_CODE\": \"M1M1M1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/utility/query",
+					"protocol": "https",
+					"host": [
+						"f51e05ee-5385-4188-bc70-62e0825471ca",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"payables",
+						"utility",
+						"query"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UtilityPayQuery_success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "UtilityPayQuery_success",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CLIENT_NUMBER\": \"12343242\",\r\n  \"SERVICE_NUMBER\": \"23452345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/utility/query",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"utility",
+								"query"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:40:25 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f5-+U2CmePo4VUZ8RLTafNP0/sEZ+4\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de6b75b0101d511"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924085"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=e952f92c14d62907"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=2198e97010fc713b"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "501"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"LastUpdatedTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n  \"Service\": {\r\n    \"Type\": \"UTILITY\",\r\n    \"CLIENT_NUMBER\": 12343242,\r\n    \"SERVICE_NUMBER\": 23452345,\r\n    \"Detail\": {\r\n      \"ServiceAddress\": \"{{$randomStreetAddress}}\",\r\n      \"TotalAmountDue\": {{$randomPrice}}\r\n    }\r\n  },\r\n  \"Payables\": [\r\n    {\r\n      \"Amount\": 15.12,\r\n      \"DueDate\": \"2019-11-01\",\r\n      \"Type\": \"UtilityBill\",\r\n      \"BILL_NUMBER\": \"{{$randomBankAccountBic}}\",\r\n      \"Principle\": 1.23,\r\n      \"Discount\": 10.01,\r\n      \"Fee\": 0.23\r\n    }\r\n  ]\r\n}"
+				},
+				{
+					"name": "UtilityPayQuery_invalidRequest",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "UtilityPayQuery_invalidRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CLIENT_NUMBER\": \"12343242\",\r\n  \"SERVICE_NUMBER\": \"23452345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/utility/query",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"utility",
+								"query"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:41:02 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de6b8370101e7b1"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924085"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=8b856859691e233e"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=baa127c33d16e60e"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "UtilityPayPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Origin",
+						"value": "https://some.toronto.ca",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-api-key",
+						"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+						"type": "text"
+					},
+					{
+						"key": "x-mock-response-name",
+						"value": "UtilityPayPayment_missing_OriginHeader",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Payment\": {\r\n    \"TellerID\": \"PayIT\",\r\n    \"PaymentType\": \"CreditCard\",\r\n    \"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n    \"ConfirmationNumber\": \"j93J22j\",\r\n    \"TransactionTimestamp\": \"2019-12-12T19:11:32.914Z\",\r\n    \"BatchID\": \"2019-11-01\",\r\n    \"ProcessingFee\": 0.01,\r\n    \"ConvenienceFee\": 0.01,\r\n    \"TotalAmount\": 1345.12,\r\n    \"CardType\": \"visa\",\r\n    \"CardNum\": \"4242********4242\",\r\n    \"LineItemsIDs\": [\r\n      \"string\"\r\n    ],\r\n    \"CancelledAmount\": 0,\r\n    \"CancelledLineItemsIDs\": [\r\n      \"string\"\r\n    ]\r\n  },\r\n  \"Service\": {\r\n    \"Type\": \"UTILITY\",\r\n    \"CLIENT_NUMBER\": \"12343242\",\r\n    \"SERVICE_NUMBER\": \"23452345\",\r\n    \"Detail\": {\r\n      \"ServiceAddress\": \"1234 Any Street\",\r\n      \"TotalAmountDue\": 2345.23\r\n    }\r\n  },\r\n  \"Payable\": {\r\n    \"LineItemID\": \"4254352\",\r\n    \"AmountDue\": 15.12,\r\n    \"DueDate\": \"2019-11-01\",\r\n    \"PaidAmount\": 15.12,\r\n    \"LineItemFee\": 0,\r\n    \"Type\": \"UtilityBill\",\r\n    \"BILL_NUMBER\": \"g4ga35\",\r\n    \"Principle\": 1.23,\r\n    \"Discount\": 10.01,\r\n    \"Fee\": 0.23\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/utility/payment",
+					"protocol": "https",
+					"host": [
+						"f51e05ee-5385-4188-bc70-62e0825471ca",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"payables",
+						"utility",
+						"payment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UtilityPayPayment_success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "UtilityPayPayment_success",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Payment\": {\r\n\t\t\"TellerID\": \"PayIT\",\r\n\t\t\"PaymentType\": \"CreditCard\",\r\n\t\t\"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n\t\t\"GatewayPaymentID\": \"234-asd-342cf-35\",\r\n\t\t\"ConfirmationNumber\": \"j93J22j\",\r\n\t\t\"TransactionTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n\t\t\"BatchID\": \"2019-11-01\",\r\n\t\t\"ProcessingFee\": 0.01,\r\n\t\t\"TotalAmount\": 1345.12,\r\n\t\t\"CardType\": \"visa\",\r\n\t\t\"CardNum\": \"4242********4242\",\r\n\t\t\"LineItemsIDs\": [\r\n\t\t\t\"ghjkjhfgh3\", \"sadfsdf2347y6\"\r\n\t\t],\r\n\t\t\"CancelledAmount\": 0,\r\n\t\t\"CancelledLineItemsIDs\": []\r\n\t},\r\n\t\"Service\": {\r\n\t\t\"Type\": \"UTILITY\",\r\n\t\t\"CLIENT_NUMBER\": 12343242,\r\n\t\t\"SERVICE_NUMBER\": 23452345,\r\n\t\t\"Detail\": {\r\n\t\t\t\"ServiceAddress\": \"1234 Any Street\",\r\n\t\t\t\"TotalAmountDue\": 2345.23\r\n\t\t}\r\n\t},\r\n\t\"Payable\": {\r\n\t\t\"Amount\": 15.12,\r\n\t\t\"DueDate\": \"2019-11-01\",\r\n\t\t\"Type\": \"UtilityBill\",\r\n\t\t\"BILL_NUMBER\": \"g4ga35\",\r\n\t\t\"Principle\": 1.23,\r\n\t\t\"Discount\": 10.01,\r\n\t\t\"Fee\": 0.23\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/utility/payment",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"utility",
+								"payment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://some.toronto.ca"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:49:51 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "f53017165de7c95601530f82"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924597"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=0d7b1f3fe8ade303"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=122351d18b0d6b28"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "UtilityPayPayment_missing_OriginHeader",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://some.toronto.ca",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"value": "PMAK-5de69d8d0fd39f003cf2bb95-348698f82561ed7844359095f56fcc0f0f",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "UtilityPayPayment_missing_OriginHeader",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Payment\": {\r\n\t\t\"TellerID\": \"PayIT\",\r\n\t\t\"PaymentType\": \"CreditCard\",\r\n\t\t\"PaymentID\": \"hwhr-2344-34asdf-4235\",\r\n\t\t\"GatewayPaymentID\": \"234-asd-342cf-35\",\r\n\t\t\"ConfirmationNumber\": \"j93J22j\",\r\n\t\t\"TransactionTimestamp\": \"2019-11-12T22:33:44.123-0400\",\r\n\t\t\"BatchID\": \"2019-11-01\",\r\n\t\t\"ProcessingFee\": 0.01,\r\n\t\t\"TotalAmount\": 1345.12,\r\n\t\t\"CardType\": \"visa\",\r\n\t\t\"CardNum\": \"4242********4242\",\r\n\t\t\"LineItemsIDs\": [\r\n\t\t\t\"ghjkjhfgh3\", \"sadfsdf2347y6\"\r\n\t\t],\r\n\t\t\"CancelledAmount\": 0,\r\n\t\t\"CancelledLineItemsIDs\": []\r\n\t},\r\n\t\"Service\": {\r\n\t\t\"Type\": \"UTILITY\",\r\n\t\t\"CLIENT_NUMBER\": 12343242,\r\n\t\t\"SERVICE_NUMBER\": 23452345,\r\n\t\t\"Detail\": {\r\n\t\t\t\"ServiceAddress\": \"1234 Any Street\",\r\n\t\t\t\"TotalAmountDue\": 2345.23\r\n\t\t}\r\n\t},\r\n\t\"Payable\": {\r\n\t\t\"Amount\": 15.12,\r\n\t\t\"DueDate\": \"2019-11-01\",\r\n\t\t\"Type\": \"UtilityBill\",\r\n\t\t\"BILL_NUMBER\": \"g4ga35\",\r\n\t\t\"Principle\": 1.23,\r\n\t\t\"Discount\": 10.01,\r\n\t\t\"Fee\": 0.23\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f51e05ee-5385-4188-bc70-62e0825471ca.mock.pstmn.io/payables/utility/payment",
+							"protocol": "https",
+							"host": [
+								"f51e05ee-5385-4188-bc70-62e0825471ca",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"payables",
+								"utility",
+								"payment"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "null"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/xml; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Dec 2019 20:50:25 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "FAIL FAIL"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1575924685"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=a290d2af94ce792f"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=af9339e0bf029816"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
