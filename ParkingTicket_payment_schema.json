@@ -47,6 +47,10 @@
 					"type": "string",
 					"example": "ParkingTicket"
 				},
+				"LineItemID": {
+					"type": "string",
+					"example": "5425432"
+				},
 				"AmountDue": {
 					"type": "number",
 					"format": "double",
