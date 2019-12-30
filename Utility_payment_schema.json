@@ -44,40 +44,61 @@
 			}
 		},
 		"UtilityPayable": {
-			"allOf": [
-				{
-					"$ref": "#/definitions/Payable"
-				}, {
-					"type": "object",
-					"properties": {
-						"Type": {
-							"type": "string",
-							"example": "UtilityBill",
-							"pattern": "^[a-zA-Z]*$"
-						},
-						"BILL_NUMBER": {
-							"type": "string",
-							"example": "g4ga35",
-							"pattern": "^[a-zA-Z]*$"
-						},
-						"Principle": {
-							"type": "number",
-							"format": "double",
-							"example": 1.23
-						},
-						"Discount": {
-							"type": "number",
-							"format": "double",
-							"example": 10.01
-						},
-						"Fee": {
-							"type": "number",
-							"format": "double",
-							"example": 0.23
-						}
-					}
-				}
-			]
+			"type": "object",
+			"properties": {
+				"Type": {
+					"type": "string",
+					"example": "UtilityBill",
+					"pattern": "^[a-zA-Z]*$"
+				},
+				"BILL_NUMBER": {
+					"type": "string",
+					"example": "g4ga35",
+					"pattern": "^[a-zA-Z]*$"
+				},
+				"Principle": {
+					"type": "number",
+					"format": "double",
+					"example": 1.23
+				},
+				"Discount": {
+					"type": "number",
+					"format": "double",
+					"example": 10.01
+				},
+				"Fee": {
+					"type": "number",
+					"format": "double",
+					"example": 0.23
+				},
+                "LineItemID": {
+                    "type": "string",
+                    "example": "4254352"
+                },
+                "AmountDue": {
+                    "type": "number",
+                    "format": "double",
+                    "example": 15.12,
+                    "description":"Amount due for this payable, such as ticket amount or bill amount"                   
+                },
+                "DueDate": {
+                    "type": "string",
+                    "format": "date",
+                    "example": "2019-11-01",
+                    "pattern": "^[0-9-]*$"
+                },
+                "PaidAmount": {
+                    "type": "number",
+                    "format": "double",
+                    "example": 15.12,
+                    "description": "Amount paid for this line-item"
+                },
+                "LineItemFee": {
+                    "type": "number",
+                    "format": "double",
+                    "example": 0
+                }
+			}
 		},
 		"UtilityService_Detail": {
 			"type": "object",
@@ -91,38 +112,6 @@
 					"type": "number",
 					"format": "double",
 					"example": 2345.23
-				}
-			}
-		},
-		"Payable": {
-			"type": "object",
-			"properties": {
-				"LineItemID": {
-					"type": "string",
-					"example": "4254352"
-				},
-				"AmountDue": {
-					"type": "number",
-					"format": "double",
-					"example": 15.12,
-					"description":"Amount due for this payable, such as ticket amount or bill amount"					
-				},
-				"DueDate": {
-					"type": "string",
-					"format": "date",
-					"example": "2019-11-01",
-					"pattern": "^[0-9-]*$"
-				},
-				"PaidAmount": {
-					"type": "number",
-					"format": "double",
-					"example": 15.12,
-					"description": "Amount paid for this line-item"
-				},
-				"LineItemFee": {
-					"type": "number",
-					"format": "double",
-					"example": 0
 				}
 			}
 		},
