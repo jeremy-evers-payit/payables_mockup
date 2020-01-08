@@ -78,6 +78,10 @@
 					"type": "string",
 					"example": "1234 Any Street"
 				},
+				"PropertyOwner":{
+					"type":"string",
+					"example":"MyTO Residentname"
+				},
 				"TotalAmountDue": {
 					"type": "number",
 					"format": "double",
