@@ -81,6 +81,10 @@
 					"type": "string",
 					"example": "55 John Street, Toronto"
 				},
+				"AssessedOwner":{
+					"type":"string",
+					"example":"MyTO Residentname"
+				},
 				"TotalAmountDue": {
 					"type": "number",
 					"example": 6234.33
