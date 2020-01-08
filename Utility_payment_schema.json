@@ -145,7 +145,7 @@
 					"type": "integer",
 					"minimum":  1000000000,
 					"maximum":  9999999999,
-					"example": "1234567890",
+					"example":  1234567890,
 					"description":"this is for tracing each payment to a billed item such as Tax, Utility, and parking ticket. When there is a payment paying Tax and Utility and several parking tickets, then the transaction number would be the same for all of them. This allows the transaction to be cancelled at the same time for everything"
 				},
 				"ConfirmationNumber": {
