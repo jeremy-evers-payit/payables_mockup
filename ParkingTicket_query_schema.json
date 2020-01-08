@@ -79,6 +79,10 @@
 				"NSFRefNo": {
 					"type": "string",
 					"example": "sadf3"
+				},
+				"ViolationDate": {
+					"type": "string",
+					"format": "date-time"
 				}
 			}
 		}
