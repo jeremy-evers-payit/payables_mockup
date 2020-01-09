@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "/",
+	"id": "#/",
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
@@ -45,11 +45,13 @@
 			"properties": {
 				"Type": {
 					"type": "string",
-					"example": "ParkingTicket"
+					"example": "ParkingTicket",
+					"pattern": "^[A-Za-z]*$"
 				},
 				"LineItemID": {
 					"type": "string",
-					"example": "5425432"
+					"example": "5425432",
+					"pattern": "^[A-Za-z0-9]*$"
 				},
 				"AmountDue": {
 					"type": "number",
@@ -85,24 +87,26 @@
 				},
 				"ViolationDate": {
 					"type": "string",
-					"format": "date-time"
+					"pattern": "^[0-9T :.-]*$"
 				}
 			}
 		},
 		"Payment": {
 			"required": [
-				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "GatewayPaymentID", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
+				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
 			],
 			"type": "object",
 			"properties": {
 				"TellerID": {
 					"type": "string",
 					"example": "PayIT",
-					"description": "this can be hardcoded to PAYIT"
+					"description": "this can be hardcoded to PAYIT",
+					"pattern": "^[a-zA-Z]*$"					
 				},
 				"PaymentType": {
 					"type": "string",
-					"example": "CreditCard"
+					"example": "CreditCard",
+					"pattern": "^[a-zA-Z]*$"					
 				},
 				"PaymentID": {
 					"type": "integer",
@@ -114,17 +118,19 @@
 				"ConfirmationNumber": {
 					"type": "string",
 					"example": "j93J22j",
-					"description":"The bank confirmation number that customers will see on their credit-card bill and reciept."
+					"description":"The bank confirmation number that customers will see on their credit-card bill and reciept.",
+					"pattern": "^[a-zA-Z0-9]*$"					
 				},
 				"TransactionTimestamp": {
 					"type": "string",
-					"format": "date-time",
-					"description": "this is to understand when the transaction happened"
+					"description": "this is to understand when the transaction happened",
+					"pattern": "^[0-9T :.-]*$"					
 				},
 				"BatchID": {
 					"type": "string",
 					"example": "2019-11-01",
-					"description": "this is used to group transactions by day, closing periods, etc. We can have one batch per day containing everything"
+					"description": "this is used to group transactions by day, closing periods, etc. We can have one batch per day containing everything",
+					"pattern": "^[0-9-]*$"					
 				},
 				"ProcessingFee": {
 					"type": "number",
@@ -145,16 +151,19 @@
 				"CardType": {
 					"type": "string",
 					"example": "visa",
-					"description": "Debit Card/Visa/MC/Amex"
+					"description": "Debit Card/Visa/MC/Amex",
+					"pattern": "^[A-Za-z]*$"					
 				},
 				"CardNum": {
 					"type": "string",
-					"example": "4242********4242"
+					"example": "4242********4242",
+					"pattern": "^[0-9*]*$"					
 				},
 				"LineItemsIDs": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"type": "string",
+					"pattern": "^[0-9A-Za-z]*$"						
 					}
 				},
 				"CancelledAmount": {
@@ -164,7 +173,8 @@
 				"CancelledLineItemsIDs": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"type": "string",
+						"pattern": "^[0-9A-Za-z]*$"						
 					}
 				}
 			}

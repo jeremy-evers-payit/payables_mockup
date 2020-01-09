@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "/",
+	"id": "#/",
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
@@ -10,7 +10,7 @@
 		"ROLL_NUMBER": {
 			"type": "string",
 			"example": "191406329000500000000",
-			"pattern": "^[0-9]*$"
+			"pattern": "^[0-9-]*$"
 		},
 		"TENANT_NUMBER": {
 			"type": "string",
@@ -19,7 +19,8 @@
 		},
 		"LAST_NAME": {
 			"type": "string",
-			"example": "Doe"
+			"example": "Doe",
+			"pattern": "^[^<>/%]*$"
 		},
 		"POSTAL_CODE": {
 			"type": "string",

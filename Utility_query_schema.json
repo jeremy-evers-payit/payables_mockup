@@ -19,7 +19,8 @@
 		},
 		"LAST_NAME": {
 			"type": "string",
-			"example": "Doe"
+			"example": "Doe",
+			"pattern": "^[^<>/%]*$"
 		},
 		"POSTAL_CODE": {
 			"type": "string",
@@ -78,9 +79,9 @@
 					"type": "string",
 					"example": "1234 Any Street"
 				},
-				"PropertyOwner":{
-					"type":"string",
-					"example":"MyTO Residentname"
+				"PropertyOwner": {
+					"type": "string",
+					"example": "MyTO Residentname"
 				},
 				"TotalAmountDue": {
 					"type": "number",

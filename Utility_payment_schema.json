@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "/",
+	"id": "#/",
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
@@ -58,7 +58,7 @@
 						"BILL_NUMBER": {
 							"type": "string",
 							"example": "g4ga35",
-							"pattern": "^[a-zA-Z]*$"
+							"pattern": "^[0-9a-zA-Z]*$"
 						},
 						"Principle": {
 							"type": "number",
@@ -85,7 +85,12 @@
 				"ServiceAddress": {
 					"type": "string",
 					"example": "1234 Any Street",
-					"pattern": "^[a-zA-Z., -]*$"
+					"pattern": "^[0-9a-zA-Z., -]*$"
+				},
+				"PropertyOwner": {
+					"type": "string",
+					"example": "John Doe",
+					"pattern": "^[0-9a-zA-Z., -]*$"
 				},
 				"TotalAmountDue": {
 					"type": "number",
@@ -99,7 +104,8 @@
 			"properties": {
 				"LineItemID": {
 					"type": "string",
-					"example": "4254352"
+					"example": "4254352",
+					"pattern": "^[A-Za-z0-9]*$"					
 				},
 				"AmountDue": {
 					"type": "number",
@@ -128,18 +134,20 @@
 		},
 		"Payment": {
 			"required": [
-				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "GatewayPaymentID", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
+				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
 			],
 			"type": "object",
 			"properties": {
 				"TellerID": {
 					"type": "string",
 					"example": "PayIT",
-					"description": "this can be hardcoded to PAYIT"
+					"description": "this can be hardcoded to PAYIT",
+					"pattern": "^[A-Za-z]*$"
 				},
 				"PaymentType": {
 					"type": "string",
-					"example": "CreditCard"
+					"example": "CreditCard",
+					"pattern": "^[A-Za-z]*$"					
 				},
 				"PaymentID": {
 					"type": "integer",
@@ -151,17 +159,19 @@
 				"ConfirmationNumber": {
 					"type": "string",
 					"example": "j93J22j",
-					"description":"The bank confirmation number that customers will see on their credit-card bill and reciept."
+					"description":"The bank confirmation number that customers will see on their credit-card bill and reciept.",
+					"pattern": "^[A-Za-z0-9]*$"					
 				},
 				"TransactionTimestamp": {
 					"type": "string",
-					"format": "date-time",
-					"description": "this is to understand when the transaction happened"
+					"description": "this is to understand when the transaction happened",
+					"pattern": "^[0-9T :.-]*$"					
 				},
 				"BatchID": {
 					"type": "string",
 					"example": "2019-11-01",
-					"description": "this is used to group transactions by day, closing periods, etc. We can have one batch per day containing everything"
+					"description": "this is used to group transactions by day, closing periods, etc. We can have one batch per day containing everything",
+					"pattern": "^[0-9-]*$"					
 				},
 				"ProcessingFee": {
 					"type": "number",
@@ -182,11 +192,13 @@
 				"CardType": {
 					"type": "string",
 					"example": "visa",
-					"description": "Debit Card/Visa/MC/Amex"
+					"description": "Debit Card/Visa/MC/Amex",
+					"pattern": "^[A-Za-z ]*$"					
 				},
 				"CardNum": {
 					"type": "string",
-					"example": "4242********4242"
+					"example": "4242********4242",
+					"pattern": "^[0-9*]*$"					
 				},
 				"LineItemsIDs": {
 					"type": "array",
