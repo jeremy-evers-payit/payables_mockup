@@ -20,6 +20,7 @@
 	"definitions": {
 		"UtilityService": {
 			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"Type": {
 					"type": "string",
@@ -39,79 +40,39 @@
 					"pattern": "^[0-9]*$"
 				},
 				"Detail": {
-					"$ref": "#/definitions/UtilityService_Detail"
+					"type": "object",
+					"ServiceAddress": {
+						"type": "string",
+						"example": "1234 Any Street",
+						"pattern": "^[0-9a-zA-Z., -]*$"
+					},
+					"PropertyOwner": {
+						"type": "string",
+						"example": "John Doe",
+						"pattern": "^[0-9a-zA-Z., -]*$"
+					},
+					"TotalAmountDue": {
+						"type": "number",
+						"format": "double",
+						"example": 2345.23
+					}
 				}
 			}
 		},
 		"UtilityPayable": {
-			"allOf": [
-				{
-					"$ref": "#/definitions/Payable"
-				}, {
-					"type": "object",
-					"properties": {
-						"Type": {
-							"type": "string",
-							"example": "UtilityBill",
-							"pattern": "^[a-zA-Z]*$"
-						},
-						"BILL_NUMBER": {
-							"type": "string",
-							"example": "g4ga35",
-							"pattern": "^[0-9a-zA-Z]*$"
-						},
-						"Principle": {
-							"type": "number",
-							"format": "double",
-							"example": 1.23
-						},
-						"Discount": {
-							"type": "number",
-							"format": "double",
-							"example": 10.01
-						},
-						"Fee": {
-							"type": "number",
-							"format": "double",
-							"example": 0.23
-						}
-					}
-				}
-			]
-		},
-		"UtilityService_Detail": {
 			"type": "object",
-			"properties": {
-				"ServiceAddress": {
-					"type": "string",
-					"example": "1234 Any Street",
-					"pattern": "^[0-9a-zA-Z., -]*$"
-				},
-				"PropertyOwner": {
-					"type": "string",
-					"example": "John Doe",
-					"pattern": "^[0-9a-zA-Z., -]*$"
-				},
-				"TotalAmountDue": {
-					"type": "number",
-					"format": "double",
-					"example": 2345.23
-				}
-			}
-		},
-		"Payable": {
-			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"LineItemID": {
 					"type": "string",
 					"example": "4254352",
-					"pattern": "^[A-Za-z0-9]*$"					
+					"pattern": "^[A-Za-z0-9]*$"
 				},
 				"AmountDue": {
 					"type": "number",
 					"format": "double",
 					"example": 15.12,
-					"description":"Amount due for this payable, such as ticket amount or bill amount"					
+					"description": "Amount due for this payable, such as ticket amount or bill amount"
 				},
 				"DueDate": {
 					"type": "string",
@@ -129,6 +90,31 @@
 					"type": "number",
 					"format": "double",
 					"example": 0
+				},
+				"Type": {
+					"type": "string",
+					"example": "UtilityBill",
+					"pattern": "^[a-zA-Z]*$"
+				},
+				"BILL_NUMBER": {
+					"type": "string",
+					"example": "g4ga35",
+					"pattern": "^[0-9a-zA-Z]*$"
+				},
+				"Principle": {
+					"type": "number",
+					"format": "double",
+					"example": 1.23
+				},
+				"Discount": {
+					"type": "number",
+					"format": "double",
+					"example": 10.01
+				},
+				"Fee": {
+					"type": "number",
+					"format": "double",
+					"example": 0.23
 				}
 			}
 		},
@@ -137,6 +123,7 @@
 				"BatchID", "CardNum", "CardType", "ConfirmationNumber", "LineItemsIDs", "PaymentID", "PaymentType", "ProcessingFee", "TellerID", "TotalAmount", "TransactionTimestamp"
 			],
 			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"TellerID": {
 					"type": "string",
@@ -147,31 +134,31 @@
 				"PaymentType": {
 					"type": "string",
 					"example": "CreditCard",
-					"pattern": "^[A-Za-z]*$"					
+					"pattern": "^[A-Za-z]*$"
 				},
 				"PaymentID": {
 					"type": "integer",
-					"minimum":  1000000000,
-					"maximum":  9999999999,
-					"example":  1234567890,
-					"description":"this is for tracing each payment to a billed item such as Tax, Utility, and parking ticket. When there is a payment paying Tax and Utility and several parking tickets, then the transaction number would be the same for all of them. This allows the transaction to be cancelled at the same time for everything"
+					"minimum": 1000000000,
+					"maximum": 9999999999,
+					"example": 1234567890,
+					"description": "this is for tracing each payment to a billed item such as Tax, Utility, and parking ticket. When there is a payment paying Tax and Utility and several parking tickets, then the transaction number would be the same for all of them. This allows the transaction to be cancelled at the same time for everything"
 				},
 				"ConfirmationNumber": {
 					"type": "string",
 					"example": "j93J22j",
-					"description":"The bank confirmation number that customers will see on their credit-card bill and reciept.",
-					"pattern": "^[A-Za-z0-9]*$"					
+					"description": "The bank confirmation number that customers will see on their credit-card bill and reciept.",
+					"pattern": "^[A-Za-z0-9]*$"
 				},
 				"TransactionTimestamp": {
 					"type": "string",
 					"description": "this is to understand when the transaction happened",
-					"pattern": "^[0-9T :.-]*$"					
+					"pattern": "^[0-9T :.-]*$"
 				},
 				"BatchID": {
 					"type": "string",
 					"example": "2019-11-01",
 					"description": "this is used to group transactions by day, closing periods, etc. We can have one batch per day containing everything",
-					"pattern": "^[0-9-]*$"					
+					"pattern": "^[0-9-]*$"
 				},
 				"ProcessingFee": {
 					"type": "number",
@@ -193,12 +180,12 @@
 					"type": "string",
 					"example": "visa",
 					"description": "Debit Card/Visa/MC/Amex",
-					"pattern": "^[A-Za-z ]*$"					
+					"pattern": "^[A-Za-z ]*$"
 				},
 				"CardNum": {
 					"type": "string",
 					"example": "4242********4242",
-					"pattern": "^[0-9*]*$"					
+					"pattern": "^[0-9*]*$"
 				},
 				"LineItemsIDs": {
 					"type": "array",

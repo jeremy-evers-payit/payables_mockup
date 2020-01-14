@@ -20,6 +20,7 @@
 	"definitions": {
 		"TaxService": {
 			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"Type": {
 					"type": "string",
@@ -44,64 +45,27 @@
 					"pattern": "^[A-Za-z]*$"
 				},
 				"Detail": {
-					"$ref": "#/definitions/TaxService_Detail"
-				}
-			}
-		},
-		"TaxService_Detail": {
-			"type": "object",
-			"properties": {
-				"PropertyLocation": {
-					"type": "string",
-					"example": "55 John Street, Toronto",
-					"pattern": "^[0-9a-zA-Z., -]*$"
-				},
-				"AssessedOwner": {
-					"type": "string",
-					"example": "55 John Street, Toronto",
-					"pattern": "^[0-9a-zA-Z., -]*$"
-				},
-				"TotalAmountDue": {
-					"type": "number",
-					"example": 6234.33
+					"type": "object",
+					"PropertyLocation": {
+						"type": "string",
+						"example": "55 John Street, Toronto",
+						"pattern": "^[0-9a-zA-Z., -]*$"
+					},
+					"AssessedOwner": {
+						"type": "string",
+						"example": "55 John Street, Toronto",
+						"pattern": "^[0-9a-zA-Z., -]*$"
+					},
+					"TotalAmountDue": {
+						"type": "number",
+						"example": 6234.33
+					}
 				}
 			}
 		},
 		"TaxPayable": {
-			"allOf": [
-				{
-					"$ref": "#/definitions/Payable"
-				}, {
-					"type": "object",
-					"properties": {
-						"Type": {
-							"type": "string",
-							"example": "PropertyTaxBill",
-							"pattern": "^[a-zA-Z]*$"
-						},
-						"BILL_NUMBER": {
-							"type": "string",
-							"example": "sdf345",
-							"pattern": "^[a-zA-Z0-9]*$"
-						},
-						"Principle": {
-							"type": "number",
-							"example": 100.23
-						},
-						"Interest": {
-							"type": "number",
-							"example": 10.01
-						},
-						"Fee": {
-							"type": "number",
-							"example": 0.2
-						}
-					}
-				}
-			]
-		},
-		"Payable": {
 			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"LineItemID": {
 					"type": "string",
@@ -130,6 +94,28 @@
 					"type": "number",
 					"format": "double",
 					"example": 0
+				},
+				"Type": {
+					"type": "string",
+					"example": "PropertyTaxBill",
+					"pattern": "^[a-zA-Z]*$"
+				},
+				"BILL_NUMBER": {
+					"type": "string",
+					"example": "sdf345",
+					"pattern": "^[a-zA-Z0-9]*$"
+				},
+				"Principle": {
+					"type": "number",
+					"example": 100.23
+				},
+				"Interest": {
+					"type": "number",
+					"example": 10.01
+				},
+				"Fee": {
+					"type": "number",
+					"example": 0.2
 				}
 			}
 		},
