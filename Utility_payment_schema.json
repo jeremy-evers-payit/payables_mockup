@@ -41,20 +41,22 @@
 				},
 				"Detail": {
 					"type": "object",
-					"ServiceAddress": {
-						"type": "string",
-						"example": "1234 Any Street",
-						"pattern": "^[0-9a-zA-Z., -]*$"
-					},
-					"PropertyOwner": {
-						"type": "string",
-						"example": "John Doe",
-						"pattern": "^[0-9a-zA-Z., -]*$"
-					},
-					"TotalAmountDue": {
-						"type": "number",
-						"format": "double",
-						"example": 2345.23
+					"properties": {
+						"ServiceAddress": {
+							"type": "string",
+							"example": "1234 Any Street",
+							"pattern": "^[0-9a-zA-Z., -]*$"
+						},
+						"PropertyOwner": {
+							"type": "string",
+							"example": "John Doe",
+							"pattern": "^[0-9a-zA-Z., -]*$"
+						},
+						"TotalAmountDue": {
+							"type": "number",
+							"format": "double",
+							"example": 2345.23
+						}
 					}
 				}
 			}
