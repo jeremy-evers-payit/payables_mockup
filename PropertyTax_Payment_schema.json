@@ -46,19 +46,21 @@
 				},
 				"Detail": {
 					"type": "object",
-					"PropertyLocation": {
-						"type": "string",
-						"example": "55 John Street, Toronto",
-						"pattern": "^[0-9a-zA-Z., -]*$"
-					},
-					"AssessedOwner": {
-						"type": "string",
-						"example": "55 John Street, Toronto",
-						"pattern": "^[0-9a-zA-Z., -]*$"
-					},
-					"TotalAmountDue": {
-						"type": "number",
-						"example": 6234.33
+					"properties": {
+						"PropertyLocation": {
+							"type": "string",
+							"example": "55 John Street, Toronto",
+							"pattern": "^[0-9a-zA-Z., -]*$"
+						},
+						"AssessedOwner": {
+							"type": "string",
+							"example": "55 John Street, Toronto",
+							"pattern": "^[0-9a-zA-Z., -]*$"
+						},
+						"TotalAmountDue": {
+							"type": "number",
+							"example": 6234.33
+						}
 					}
 				}
 			}
