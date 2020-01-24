@@ -68,6 +68,7 @@
 				},
 				"DueDate": {
 					"type": "string",
+					"nullable": true,
 					"format": "date",
 					"example": "2019-11-01"
 				},
