@@ -47,23 +47,23 @@
 					"properties": {
 						"status": {
 							"type": "string",
-							"example": "FAILURE",
+							"example": "FAILURE"
 						},
 						"accountNumber": {
 							"type": "string",
-							"example": "00083199712113588718",
+							"example": "00083199712113588718"
 						},
 						"errorLabel": {
 							"type": "string",
-							"example": "LAST_NAME",
+							"example": "LAST_NAME"
 						},
 						"errorMessage": {
 							"type": "string",
-							"example": "You must provide the valid last name of the utility account.",
+							"example": "You must provide the valid last name of the utility account."
 						},
 						"errorCode": {
 							"type": "string",
-							"example": "ERR-RSD-VAL-008",
+							"example": "ERR-RSD-VAL-008"
 						},
 					}
 				}
