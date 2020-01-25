@@ -33,10 +33,6 @@
 		"UtilityQueryResp": {
 			"type": "object",
 			"properties": {
-				"LastUpdatedTimestamp": {
-					"type": "string",
-					"format": "date-time"
-				},
 				"Service": {
 					"$ref": "#/definitions/UtilityService"
 				},
@@ -44,6 +40,31 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/UtilityPayable"
+					}
+				},
+				"validateResponse" : {
+					"type": "object",
+					"properties": {
+						"status": {
+							"type": "string",
+							"example": "FAILURE",
+						},
+						"accountNumber": {
+							"type": "string",
+							"example": "00083199712113588718",
+						},
+						"errorLabel": {
+							"type": "string",
+							"example": "LAST_NAME",
+						},
+						"errorMessage": {
+							"type": "string",
+							"example": "You must provide the valid last name of the utility account.",
+						},
+						"errorCode": {
+							"type": "string",
+							"example": "ERR-RSD-VAL-008",
+						},
 					}
 				}
 			},
@@ -93,7 +114,7 @@
 		"Payable": {
 			"type": "object",
 			"properties": {
-				"AmountDue": {
+				"Amount": {
 					"type": "number",
 					"format": "double",
 					"example": 15.12
@@ -125,12 +146,12 @@
 							"format": "double",
 							"example": 1.23
 						},
-						"Discount": {
+						"Fee": {
 							"type": "number",
 							"format": "double",
-							"example": 10.01
+							"example": 0.23
 						},
-						"Fee": {
+						"Interest": {
 							"type": "number",
 							"format": "double",
 							"example": 0.23
