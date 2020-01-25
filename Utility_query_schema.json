@@ -64,7 +64,7 @@
 						"errorCode": {
 							"type": "string",
 							"example": "ERR-RSD-VAL-008"
-						},
+						}
 					}
 				}
 			},
