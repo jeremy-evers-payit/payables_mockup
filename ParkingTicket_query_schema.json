@@ -22,10 +22,6 @@
 		"TicketQueryResp": {
 			"type": "object",
 			"properties": {
-				"LastUpdatedTimestamp": {
-					"type": "string",
-					"format": "date-time"
-				},
 				"Service": {
 					"$ref": "#/definitions/TicketService"
 				},
@@ -79,10 +75,35 @@
 				"NSFRefNo": {
 					"type": "string",
 					"example": "sadf3"
-				},
-				"ViolationDate": {
+				}
+			}
+		},
+		"validateResponse" : {
+			"type": "object",
+			"properties": {
+				"status": {
 					"type": "string",
-					"format": "date-time"
+					"example": "FAILURE"
+				},
+				"tagNumber": {
+					"type": "string",
+					"example": "NR375822"
+				},
+				"plateNumber": {
+					"type": "string",
+					"example": "BYJB503"
+				},
+				"errorLabel": {
+					"type": "string",
+					"example": "TAG_NUMBER"
+				},
+				"errorMessage": {
+					"type": "string",
+					"example": "You must provide a valid tag number."
+				},
+				"errorCode": {
+					"type": "string",
+					"example": "ERR-RSD-VAL-008"
 				}
 			}
 		}
