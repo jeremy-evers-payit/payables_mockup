@@ -127,6 +127,31 @@
 					"example": 0.2
 				}
 			}
+		},
+		"validateResponse" : {
+			"type": "object",
+			"properties": {
+				"status": {
+					"type": "string",
+					"example": "FAILURE"
+				},
+				"rollNumber": {
+					"type": "string",
+					"example": "190101104002900451116"
+				},
+				"errorLabel": {
+					"type": "string",
+					"example": "LAST_NAME"
+				},
+				"errorMessage": {
+					"type": "string",
+					"example": "You must provide a valid last name."
+				},
+				"errorCode": {
+					"type": "string",
+					"example": "ERR-RSD-VAL-008"
+				}
+			}
 		}
 	}
 }
