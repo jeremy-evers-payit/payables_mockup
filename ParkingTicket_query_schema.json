@@ -30,6 +30,35 @@
 					"items": {
 						"$ref": "#/definitions/TicketPayable"
 					}
+				},
+				"validateResponse" : {
+					"type": "object",
+					"properties": {
+						"status": {
+							"type": "string",
+							"example": "FAILURE"
+						},
+						"tagNumber": {
+							"type": "string",
+							"example": "NR375822"
+						},
+						"plateNumber": {
+							"type": "string",
+							"example": "BYJB503"
+						},
+						"errorLabel": {
+							"type": "string",
+							"example": "TAG_NUMBER"
+						},
+						"errorMessage": {
+							"type": "string",
+							"example": "You must provide a valid tag number."
+						},
+						"errorCode": {
+							"type": "string",
+							"example": "ERR-RSD-VAL-008"
+						}
+					}
 				}
 			},
 			"description": "Parking Ticket payables"
@@ -75,35 +104,6 @@
 				"NSFRefNo": {
 					"type": "string",
 					"example": "sadf3"
-				}
-			}
-		},
-		"validateResponse" : {
-			"type": "object",
-			"properties": {
-				"status": {
-					"type": "string",
-					"example": "FAILURE"
-				},
-				"tagNumber": {
-					"type": "string",
-					"example": "NR375822"
-				},
-				"plateNumber": {
-					"type": "string",
-					"example": "BYJB503"
-				},
-				"errorLabel": {
-					"type": "string",
-					"example": "TAG_NUMBER"
-				},
-				"errorMessage": {
-					"type": "string",
-					"example": "You must provide a valid tag number."
-				},
-				"errorCode": {
-					"type": "string",
-					"example": "ERR-RSD-VAL-008"
 				}
 			}
 		}
