@@ -93,7 +93,6 @@
 				},
 				"DueDate": {
 					"type": "string",
-					"format": "date",
 					"example": "2019-11-01"
 				},
 				"TagNumber": {
