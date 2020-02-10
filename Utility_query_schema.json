@@ -114,7 +114,7 @@
 		"Payable": {
 			"type": "object",
 			"properties": {
-				"Amount": {
+				"AmountDue": {
 					"type": "number",
 					"format": "double",
 					"example": 15.12
@@ -133,17 +133,6 @@
 				}, {
 					"type": "object",
 					"properties": {
-						"AmountDue": {
-							"type": "number",
-							"format": "double",
-							"example": 15.12
-						},
-						"DueDate": {
-							"type": "string",
-							"format": "date",
-							"example": "2019-11-01",
-							"pattern": "^[0-9-]*$"
-						},
 						"Type": {
 							"type": "string",
 							"example": "UtilityBill"
