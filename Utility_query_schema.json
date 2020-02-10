@@ -136,8 +136,7 @@
 						"AmountDue": {
 							"type": "number",
 							"format": "double",
-							"example": 15.12,
-							"description": "Amount due for this payable, such as ticket amount or bill amount"
+							"example": 15.12
 						},
 						"DueDate": {
 							"type": "string",
@@ -159,11 +158,6 @@
 							"example": 1.23
 						},
 						"Fee": {
-							"type": "number",
-							"format": "double",
-							"example": 0.23
-						},
-						"Interest": {
 							"type": "number",
 							"format": "double",
 							"example": 0.23
